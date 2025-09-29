@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</title>
+  <link rel="icon" type="image/x-icon" href="static/images/eye.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(","\\)"]],
+        displayMath: [["\\[","\\]"], ["$$","$$"]]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title"><img src="static/images/eye.ico" alt="icon" style="height: 1em; vertical-align: -0.15em; margin-right: .3em;">ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</h1> -->
+            <h1 class="title is-1 publication-title">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="#AUTHOR-2" class="author-link placeholder-link">Jiayi Chen<sup>1*</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://github.com/Songwxuan" class="author-link placeholder-link">Wenxuan Song<sup>1*</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://dingpx.github.io/" class="author-link placeholder-link">Pengxiang Ding<sup>2,3†</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="#AUTHOR-4" class="author-link placeholder-link">Ziyang Zhou<sup>1</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://h-zhao1997.github.io/" class="author-link placeholder-link">Han Zhao<sup>2,3</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="#AUTHOR-6" class="author-link placeholder-link">Feilong Tang<sup>1</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="#AUTHOR-7" class="author-link placeholder-link">Donglin Wang<sup>2</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block corresponding-author">
+                <a href="https://sites.google.com/view/haoangli/homepage" class="author-link placeholder-link">Haoang Li<sup>1‡</sup></a>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="is-size-5 publication-affiliations">
+              <span class="affiliation-block">
+                <sup>1</sup>IRPN Lab, The Hong Kong University of Science and Technology (Guangzhou)<br>
+                <sup>2</sup>MiLab, Westlake University &nbsp;&nbsp;
+                <sup>3</sup>Zhejiang University &nbsp;&nbsp;
+               </span>
+               <div class="contribution-notes">
+                <small>
+                  <sup>*</sup>Equal Contribution &nbsp;
+                  <sup>†</sup>Project Leader &nbsp;
+                  <sup>‡</sup>Corresponding Author
+                </small>
+              </div>
+            </div>
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Huggingface</span>
+                </a>
+
+              </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-language-action (VLA) models aim to understand natural language instructions and visual observations and to execute corresponding actions as an embodied agent.
+            Recent work integrates future images into the understanding-acting loop, yielding unified VLAs that jointly understand, generate, and act---reading text and images and producing future images and actions.
+            However, these models either rely on external experts for modality unification or treat image generation and action prediction as separate processes, limiting the benefits of direct synergy between these tasks. 
+            Our core philosophy is to optimize generation and action jointly through a synchronous denoising process, where the iterative refinement enables actions to evolve from initialization, under constant and sufficient visual guidance. 
+            We ground this philosophy in our proposed Unified Diffusion VLA and Joint Discrete Denoising Diffusion Process (JD3P), which is a joint diffusion process that integrates multiple modalities into a single denoising trajectory to serve as the key mechanism enabling understanding, generation, and acting to be intrinsically synergistic.
+            Our model and theory are built on a unified tokenized space of all modalities and a hybrid attention mechanism. 
+            We further propose a two-stage training pipeline and several inference-time techniques that optimize performance and efficiency. 
+            Our approach achieves state-of-the-art performance on benchmarks such as CALVIN, LIBERO, and SimplerEnv with 4x faster inference than autoregressive methods, and we demonstrate its effectiveness through in-depth analysis and real-world evaluations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- Paper introduction -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduce</h2>
+        <div class="content has-text-justified">
+          <!-- <figure class="image is-16by4" >
+            <img src="static/images/teaser_new.jpg" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure> -->
+          <ol>
+            <li> We propose the unified diffusion VLA, which tightly couples understanding, generation, and acting in a mutually beneficial manner.</li>
+            <li> We instantiate this design via discrete tokenization, hybrid attention, and the JD3P process as the central mechanism for cross-modal synergy.</li>
+            <li> We design a two-stage training pipeline to activate the image generation capabilities and introduce several test-time techniques that ensure both high performance and efficiency.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper introduction -->
+
+<!-- Paper method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/Overview.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <ol>
+            We propose UD-VLA, a unified diffusion VLA that bridges vision-language understanding, future image generation, and action prediction in a single transformer.
+            We first construct a unified multimodal space by quantizing multimodal information into discrete tokens.
+            Next, we design a hybrid attention mechanism to maximize the utilization of information from each modality.
+            We then formalize our core theory, Joint Discrete Denoising Diffusion Process (JD3P), and reformulate the loss computation to support its training.
+            Finally, we balance performance and efficiency during inference through several key techniques.
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper method -->
+
+<!-- Paper pretraining -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Unified Diffusion VLA</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/attention.png" alt="Hybrid attention overview"  style="width:50% ; height:50% ;">
+          </figure>
+          <p><b>Unified Tokenization.</b> We convert language, vision, and action into discrete tokens and concatenate them into a single multimodal sequence with special markers <code>&lt;BOI&gt;</code>/<code>&lt;EOI&gt;</code> and <code>&lt;BOA&gt;</code>/<code>&lt;EOA&gt;</code>.</p>
+          \[
+            [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}\;;\;\text{action tokens}\;]
+          \]
+          <p><b>Hybrid Attention Mechanism.</b> Text and current image use causal and bidirectional attention, respectively. Future-image tokens form a generation block and action tokens an acting block; each block is bidirectional, while cross-block attention is causal (acting attends to both input and generated image, no action-to-vision flow).</p>
+          <p><b>Joint Discrete Denoising Diffusion Process (JD3P).</b> Actions and images are generated in parallel within one denoising step. With future-image tokens \(\mathbf{v}_0\) and action tokens \(\mathbf{a}_0\), the joint sequence is
+          \[
+            \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
+          \]
+          We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
+          \[
+            \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
+          \]
+          The denoising factorizes as
+          \[
+            p_\theta(\mathbf{v}_{t-1},\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})
+            = p_\theta(\mathbf{v}_{t-1}\mid \mathbf{v}_t,\mathbf{c})\;
+              p_\theta(\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c}).
+          \]
+          </p>
+          <p><b>Loss.</b> We adopt a single-step mask-predict objective, computing cross-entropy only on masked positions:
+          \[
+            \mathcal{L}_{\text{CE}}(\theta)
+                         = - \beta \sum_{j}^{L_v} \log p_\theta^{(v)}(v_{0,j}\mid \mathbf{v}_t,\mathbf{c})\, \mathbf{1}\{v_{t,j}=\mathrm{M}\}
+               - \sum_{i}^{L_a} \log p_\theta^{(a)}(a_{0,i}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})\, \mathbf{1}\{a_{t,i}=\mathrm{M}\}.
+           \]
+          </p>
+          <p><b>Training.</b> Initialize from a pretrained VLM. 
+            <ol>
+              <b>Stage (i):</b> Post-train on large-scale videos to learn future image generation with sequences
+            \[
+              [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}\;].
+            \]
+            <b>Stage (ii):</b> Jointly train future image and action under JD3P on downstream robot datasets. We reformulate AR decoding as diffusion with a shift operation to predict the next token, preserving next-token skills while gaining bidirectional context and parallel decoding.</p>
+          </ol>
+            <p><b>Inference.</b> Parallel decoding with adaptive masking: initialize \(\mathbf v_T,\mathbf a_T\) as <code>&lt;MASK&gt;</code>, predict all positions in parallel for a few iterations. Use prefix KV-Cache for prompt/current image and pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, <code>&lt;BOA&gt;</code> to guide denoising. Apply a cosine mask schedule
+            \[
+              \rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right),\quad t=T,\dots,1.
+            \]
+            Restrict logits to each modality’s codebook (decoding space mapping), and once <code>&lt;EOA&gt;</code> appears at index \(i^*\), fix action length by masking later positions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper pretraining -->
+
+
+<!-- Paper Experiments -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+          <h3 class="title is-4  has-text-centered">Evaluation of Long-Horizon Robotic Manipulation on the CALVIN Benchmark</h3>
+          <div class="content has-text-justified">
+            <figure class="image is-16by4" >
+              <img src="static/images/CALVIN.png" alt="UD-VLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+          </div>
+          <h3 class="title is-4  has-text-centered">Evaluation and comparison on the LIBERO benchmark</h3>
+          <div class="content has-text-justified">
+            <figure class="image is-16by4" >
+              <img src="static/images/LIBERO.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+          </div>
+          <h3 class="title is-4  has-text-centered">Evaluation results on SimplerEnv-WidowX</h3>
+          <div class="content has-text-justified">
+            <figure class="image is-16by4" >
+              <img src="static/images/simplerenv.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+          </div>
+          <h3 class="title is-4  has-text-centered">In-Depth Analysis</h3>
+          <div class="content has-text-justified">
+            <p><b>Effectiveness of Hybrid Attention Mechanism.</b> 
+              <ul>
+                <li><b>Causal</b> denotes causal attention.</li>
+                <li><b>Bdirectional</b> denotes bidirectional attention.</li>
+                <li><b>Hybrid (ours)</b> denotes our proposed hybrid attention mechanism.</li>
+              </ul>
+            </p>
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <thead>
+                <tr><th>Attention setting</th><th>Avg success length</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Causal</td><td>4.04</td></tr>
+                <tr><td>Bdirectional</td><td>4.32</td></tr>
+                <tr><td><b>Hybrid (ours)</b></td><td><b>4.64</b></td></tr>
+              </tbody>
+            </table>
+
+            <p><b>Effectiveness of Future Image Generation.</b> 
+              <ul>
+                <li><b>Null</b> denotes action prediction without visual generation.</li>
+                <li><b>Current Image</b> denotes reconstruct current observation.</li>
+                <li><b>Predict future frames (ours)</b> denotes predict future frames and actions.</li>
+              </ul>
+            </p>
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <thead>
+                <tr><th>Setting</th><th>Outcome</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>No visual generation</td><td>4.21</td></tr>
+                <tr><td>Reconstruct current frames</td><td>4.39</td></tr>
+                <tr><td><b>Predict future frames (ours)</b></td><td><b>4.64</b></td></tr>
+              </tbody>
+            </table>
+
+            <p><b>Effectiveness of JD3P.</b> 
+              <ul>
+                <li><b>Autoregressive (AR)</b> denotes autoregressive decoding.</li>
+                <li><b>Jacobi (AR)</b> denotes Jacobi decoding.</li>
+                <li><b>Independent diffusion</b> denotes independent diffusion decoding.</li>
+                <li><b>JD3P (ours)</b> denotes our proposed JD3P decoding.</li>
+              </ul>
+            </p>
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <thead>
+                <tr><th>Method</th><th>Avg length</th><th>Speed</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Autoregressive (AR)</td><td>4.18</td><td>50.2 <span style="color: rgb(26, 232, 26);">(x1.0)</span></td></tr>
+                <tr><td>Jacobi (AR)</td><td>4.16 <span style="color: rgb(232, 26, 26);">(-0.02)</span></td><td>101.6 <span style="color: rgb(26, 232, 26);">(x2.0)</span></td></tr>
+                <tr><td>Independent diffusion</td><td>4.35 <span style="color: rgb(26, 232, 108);">(+0.19)</span></td><td>144.4 <span style="color: rgb(26, 232, 26);">(x2.9)</span></td></tr>
+                <tr><td><b>JD3P (ours)</b></td><td><b>4.64 <span style="color: rgb(26, 232, 108);">(+0.46)</span></b></td><td><b>219.3 <span style="color: rgb(26, 232, 26);">(x4.3)</span></b></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper experiments -->
+
+<!-- Paper method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">REAL-WORLD EXPERIMENT</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
+          <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @misc{udvla2025,
+          title={Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process},
+          author={Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li},
+          year={2025},
+          url={https://arxiv.org/abs/}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
