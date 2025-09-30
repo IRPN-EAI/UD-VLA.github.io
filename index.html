@@ -53,11 +53,12 @@
     }
   }
   </style>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="description" content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
     <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UD-VLA</title> 
+    <link rel="icon" type="image/x-icon" href="static/images/logo.ico">
   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -82,8 +83,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="icon" href="./static/images/facon1.png">
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer="" src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
@@ -105,17 +106,17 @@
     }
     </style>
   
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [["\\(","\\)"]],
-          displayMath: [["\\[","\\]"], ["$$","$$"]]
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(","\\)"]],
+        displayMath: [["\\[","\\]"], ["$$","$$"]]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
-  </head>
+</head>
   <body data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed="">
   
   
@@ -156,7 +157,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- <h1 class="title is-1 publication-title"><img src="static/images/eye.ico" alt="icon" style="height: 1em; vertical-align: -0.15em; margin-right: .3em;">ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</h1> -->
+            <h1 class="title is-1 publication-title"><img src="static/images/logo.ico" alt="icon" style="height: 1.3em; vertical-align: -0.15em; margin-right: .3em;">ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</h1>
             <h1 class="title is-1 publication-title">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -280,9 +281,9 @@
   </div>
 </section>
 
-  
-  
-  
+
+
+
   
   <!--<section class="section">-->
   <!--  <div class="container is-max-desktop">-->
@@ -302,9 +303,9 @@
   <!-------------------------------- Why Propose VLA-Adapter? -------------------------------->
   <!------------------------------------------------------------------------------------------>
   <section class="section" style="margin-top: 0rem;">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
           <h2 id="why-vla" class="title is-3" style="font-family: 'Google Sans', sans-serif;">Introducing UD-VLA</h2>
   
   
@@ -326,10 +327,10 @@
   
   
   
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   
   
   
@@ -339,7 +340,7 @@
   <!-------------------------------------- 1. Pipelines -------------------------------------->
   <!------------------------------------------------------------------------------------------>
   <section class="section">
-    <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
       <h2 id="pipelines" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center;">1. Pipelines</h2>
   
       <!-- Explanation. -->
@@ -356,16 +357,16 @@
       <!-- Fig 2. -->
       <!------------>
       <div class="columns is-centered" style="margin-top: 1rem;">
-        <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
           <figure style="text-align: center; font-size: 17px;">
             <img src="./static/images/Overview.png" alt="Framework" style="width: 870px;">
             <figcaption><b>Figure 2.</b> The pipeline of UD-VLA. </figcaption>
           </figure>
         </div>
-     </div>
+      </div>
   
-    </div>
-  </section>
+  </div>
+</section>
   
   
   
@@ -375,7 +376,7 @@
   <!------------------------------- 2. Questions & Key Findings ------------------------------>
   <!------------------------------------------------------------------------------------------>
   <section class="section">
-    <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
       <h2 id="Keyfindings" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center;">2. METHODS</h2>
   
       <!------------------------------------------------------------------------------------>
@@ -439,27 +440,27 @@
                     Actions and images are generated in parallel within one denoising step. With future-image tokens \(\mathbf{v}_0\) and action tokens \(\mathbf{a}_0\), the joint sequence is
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
-                    \[
-                      \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
-                    \]
+          \[
+            \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
+          \]
                   </div>
                   <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
-                    We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
+          We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
-                    \[
-                      \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
-                    \]
+          \[
+            \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
+          \]
                   </div>
                   <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
-                    The denoising factorizes as
+          The denoising factorizes as
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
-                    \[
-                      p_\theta(\mathbf{v}_{t-1},\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})
-                      = p_\theta(\mathbf{v}_{t-1}\mid \mathbf{v}_t,\mathbf{c})\;
-                        p_\theta(\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c}).
-                    \]
+          \[
+            p_\theta(\mathbf{v}_{t-1},\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})
+            = p_\theta(\mathbf{v}_{t-1}\mid \mathbf{v}_t,\mathbf{c})\;
+              p_\theta(\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c}).
+          \]
                   </div>
                 </div>
                   </p>              
@@ -483,11 +484,11 @@
                 We adopt a single-step mask-predict objective, computing cross-entropy only on masked positions:
               </p>
               <div style="text-align: center; margin: 1em 0;">
-                \[
-                  \mathcal{L}_{\text{CE}}(\theta)
-                               = - \beta \sum_{j}^{L_v} \log p_\theta^{(v)}(v_{0,j}\mid \mathbf{v}_t,\mathbf{c})\, \mathbf{1}\{v_{t,j}=\mathrm{M}\}
-                     - \sum_{i}^{L_a} \log p_\theta^{(a)}(a_{0,i}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})\, \mathbf{1}\{a_{t,i}=\mathrm{M}\}.
-                 \]
+          \[
+            \mathcal{L}_{\text{CE}}(\theta)
+                         = - \beta \sum_{j}^{L_v} \log p_\theta^{(v)}(v_{0,j}\mid \mathbf{v}_t,\mathbf{c})\, \mathbf{1}\{v_{t,j}=\mathrm{M}\}
+               - \sum_{i}^{L_a} \log p_\theta^{(a)}(a_{0,i}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})\, \mathbf{1}\{a_{t,i}=\mathrm{M}\}.
+           \]
               </div>
             </div>
           </div>
@@ -561,8 +562,8 @@
         </div>
       </div>
 
-    </div>
-  </section>
+  </div>
+</section>
   
   
   
@@ -972,13 +973,13 @@
               <div id="interpolation-image-wrapper"><img src="./static/interpolation/stacked/000000.jpg" style="width: 300px; height: auto; display: block; margin: 0px auto;"></div>
               <div style="display: flex; justify-content: center;">
                 <input class="slider is-large is-info" id="interpolation-slider" style="width: 300px;" step="1" min="0" max="181" value="0" type="range">
-              </div>
-            </div>
+      </div>
+    </div>
             <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
               <img src="./static/images/end.jpg" class="interpolation-image" alt="Interpolation end reference image.">
               <p style="font-size: 19px;">End RGB observation and Proprio. state</p>
             </div>
-          </div>
+  </div>
   
           <div class="columns is-vcentered interpolation-panel">
             <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
@@ -999,19 +1000,19 @@
 
           <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
             3.4 Real-World Experiment</h2>
-            <div class="content has-text-justified">
-              <figure class="image is-16by4" >
-                <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:auto ; height:auto ;">
-              </figure>
-              <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
-              <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
-            </div>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+                <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:auto ; height:100% ;">
+          </figure>
+          <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
+          <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
+        </div>
 
   
-      </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
 
   
   
@@ -1028,12 +1029,12 @@
       <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif;">BibTeX</h2>
       <pre id="bibtex-code" style="font-family: 'Google Sans', sans-serif; font-size: 18px; padding: 1rem; background: #f5f5f5; border-radius: 5px; white-space: pre;">      <code>
           @article{udvla2025,
-            title={Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process},
-            author={Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li},
-            year={2025},
-            url={https://arxiv.org/abs/}
-          }
-        </code></pre>
+          title={Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process},
+          author={Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li},
+          year={2025},
+          url={https://arxiv.org/abs/}
+        }
+      </code></pre>
       <button type="button" id="copy-btn" style="position: absolute; top: 5px; right: 5px; padding: 5px 10px; font-size: 14px; cursor: pointer;">
       ☑ Copy
     </button>
@@ -1077,7 +1078,7 @@
     });
   })();
   </script>
-  </section>
+</section>
   
   
   
