@@ -1,59 +1,130 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <title>Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</title>
-  <link rel="icon" type="image/x-icon" href="static/images/eye.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [["\\(","\\)"]],
-        displayMath: [["\\[","\\]"], ["$$","$$"]]
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><style type="text/css">
+  .anticon {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .anticon > * {
+    line-height: 1;
+  }
+  
+  .anticon svg {
+    display: inline-block;
+  }
+  
+  .anticon::before {
+    display: none;
+  }
+  
+  .anticon .anticon-icon {
+    display: block;
+  }
+  
+  .anticon[tabindex] {
+    cursor: pointer;
+  }
+  
+  .anticon-spin::before,
+  .anticon-spin {
+    display: inline-block;
+    -webkit-animation: loadingCircle 1s infinite linear;
+    animation: loadingCircle 1s infinite linear;
+  }
+  
+  @-webkit-keyframes loadingCircle {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loadingCircle {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  </style>
+    <meta charset="utf-8">
+    <meta name="description" content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+    <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VLA-Adapter</title> 
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+  
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
+  
+      gtag('js', new Date());
+  
+      gtag('config', 'G-PYVRSFMDRL');
+    </script>
+  
+    <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/facon1.png">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer="" src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  
+    <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 4rem;
+    }
+  
+    a[href^="http"] {
+      color: rgb(205, 50, 151);
+      text-decoration: none;
+    }
+    a[href^="http"]:hover {
+      color: rgb(205, 50, 151);
+      text-decoration: underline;
+    }
+    </style>
+  
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(","\\)"]],
+          displayMath: [["\\[","\\]"], ["$$","$$"]]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed="">
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!--------------------------------------- Navigation --------------------------------------->
+  <!------------------------------------------------------------------------------------------>
   <nav class="navbar is-fixed-top" role="navigation" style="font-family: 'Roboto', sans-serif; background: white; box-shadow: none;">
     <div class="container is-max-desktop">
       <div class="navbar-brand">
@@ -63,15 +134,23 @@
       </div>
       <div class="navbar-menu is-active">
         <div class="navbar-end" style="font-size: 17px; gap: 0px;">
-          <a class="navbar-item" href="#why-vla">Why Propose UD-VLA?</a>
+          <a class="navbar-item" href="#why-vla">Introducing UD-VLA</a>
           <a class="navbar-item" href="#pipelines">1. Pipelines</a>
-          <a class="navbar-item" href="#Keyfindings">2. Questions &amp; Key Findings</a>
+          <a class="navbar-item" href="#Keyfindings">2. METHODS</a>
           <a class="navbar-item" href="#Results">3. Results</a>
         </div>
       </div>
     </div>
   </nav>
 
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------ Title & Authors ------------------------------------->
+  <!------------------------------------------------------------------------------------------>
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -201,152 +280,390 @@
   </div>
 </section>
 
-
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Why Propose UD-VLA?</h2>
-        <div class="content has-text-justified">
-          <p>
-            Vision-language-action (VLA) models aim to understand natural language instructions and visual observations and to execute corresponding actions as an embodied agent.
-            Recent work integrates future images into the understanding-acting loop, yielding unified VLAs that jointly understand, generate, and act---reading text and images and producing future images and actions.
-            However, these models either rely on external experts for modality unification or treat image generation and action prediction as separate processes, limiting the benefits of direct synergy between these tasks. 
-            Our core philosophy is to optimize generation and action jointly through a synchronous denoising process, where the iterative refinement enables actions to evolve from initialization, under constant and sufficient visual guidance. 
-            We ground this philosophy in our proposed Unified Diffusion VLA and Joint Discrete Denoising Diffusion Process (JD3P), which is a joint diffusion process that integrates multiple modalities into a single denoising trajectory to serve as the key mechanism enabling understanding, generation, and acting to be intrinsically synergistic.
-            Our model and theory are built on a unified tokenized space of all modalities and a hybrid attention mechanism. 
-            We further propose a two-stage training pipeline and several inference-time techniques that optimize performance and efficiency. 
-            Our approach achieves state-of-the-art performance on benchmarks such as CALVIN, LIBERO, and SimplerEnv with 4x faster inference than autoregressive methods, and we demonstrate its effectiveness through in-depth analysis and real-world evaluations.
-          </p>
+  
+  
+  
+  
+  <!--<section class="section">-->
+  <!--  <div class="container is-max-desktop">-->
+  <!--    <div class="content has-text-centered">-->
+  <!--      <video id="replay-video" controls muted preload playsinline width="75%">-->
+  <!--        <source src="./static/videos/replay.mp4" type="video/mp4">-->
+  <!--      </video>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!-------------------------------- Why Propose VLA-Adapter? -------------------------------->
+  <!------------------------------------------------------------------------------------------>
+  <section class="section" style="margin-top: 0rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 id="why-vla" class="title is-3" style="font-family: 'Google Sans', sans-serif;">Introducing UD-VLA</h2>
+  
+  
+          <!-- Abstract. -->
+          <!--------------->
+          <div class="content has-text-justified" style="font-family: 'Google Sans', sans-serif; font-size: 1.1rem;">
+            <p style="font-size: 18.5px; margin-top: -0.6rem;">
+              <b>Background.</b> &nbsp; Vision-language-action (VLA) models understand language and visuals to execute actions as embodied agents. Recent unified VLAs integrate future images for foresight-driven policies, but often rely on external experts or separate generation and action processes, limiting synergy. Our Unified Diffusion VLA (UD-VLA) jointly optimizes these via a synchronous Joint Discrete Denoising Diffusion Process (JD3P), built on unified tokenization and hybrid attention, enabling intrinsic cross-modal benefits with a two-stage training pipeline for efficiency.
+            </p>
+  
+            <p style="font-size: 18.5px; margin-top: -0.6rem;">
+              <b>Contributions.</b> 
+              <ul style="list-style-type: disc; margin-left: 1.5em; font-size: 18.5px;">
+                <li>We propose UD-VLA, which tightly couples understanding, generation, and acting in a mutually beneficial manner.</li>
+                <li>We instantiate this design via discrete tokenization, hybrid attention, and the JD3P process as the central mechanism for cross-modal synergy.</li>
+                <li>We design a two-stage training pipeline to activate the image generation capabilities and introduce several test-time techniques that ensure both high performance and efficiency.</li>
+              </ul>
+            </p>
+  
+  
+  
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-
-
-<!-- Paper method -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Pipelines</h2>
-        <div class="content has-text-justified">
-          <figure class="image is-16by4" >
-            <img src="static/images/Overview.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+  </section>
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!-------------------------------------- 1. Pipelines -------------------------------------->
+  <!------------------------------------------------------------------------------------------>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 id="pipelines" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center;">1. Pipelines</h2>
+  
+      <!-- Explanation. -->
+      <!------------------>
+      <p style="font-size: 19px; text-align: justify;">
+        <b>Brief Description.</b> &nbsp;     We first construct a unified multimodal space by quantizing multimodal information into discrete tokens.
+        We then formalize a Joint Discrete Denoising Diffusion Process (JD3P) to allow visual generation and action prediction to be intrinsically synergistic.
+        Moreover, we build our model on a pre-trained VLM and conduct two-stage training.
+        Finally, we balance performance and efficiency during inference through several key techniques.
+        <!-- <a href="https://arxiv.org/abs/2402.07865" target="_blank" rel="noopener" title="Prismatic‑VLMs (ICML'24)"> -->
+      </p>
+  
+  
+      <!-- Fig 2. -->
+      <!------------>
+      <div class="columns is-centered" style="margin-top: 1rem;">
+        <div class="container is-max-desktop">
+          <figure style="text-align: center; font-size: 17px;">
+            <img src="./static/images/Overview.png" alt="Framework" style="width: 870px;">
+            <figcaption><b>Figure 2.</b> The pipeline of UD-VLA. </figcaption>
           </figure>
-          <ol>
-            We propose UD-VLA, a unified diffusion VLA that bridges vision-language understanding, future image generation, and action prediction in a single transformer.
-            We first construct a unified multimodal space by quantizing multimodal information into discrete tokens.
-            Next, we design a hybrid attention mechanism to maximize the utilization of information from each modality.
-            We then formalize our core theory, Joint Discrete Denoising Diffusion Process (JD3P), and reformulate the loss computation to support its training.
-            Finally, we balance performance and efficiency during inference through several key techniques.
+        </div>
+     </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------- 2. Questions & Key Findings ------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 id="Keyfindings" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center;">2. METHODS</h2>
+  
+      <!------------------------------------------------------------------------------------>
+      <!----------------------------------- 2.1 Conditions --------------------------------->
+      <!------------------------------------------------------------------------------------>
+      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; font-size: 26px;">
+        2.1 UNIFIED DIFFUSION VLA</h2>
+  
+      <!------- Key Findings 1 & 2 & 3. ------->
+      <!--------------------------------------->
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <p style="font-size: 21px; text-align: justify;">
+          <b><a href="#q1-1">Unified Tokenization</a></b>
+        </p>
+      </div>
+      <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+        <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+          We convert language, vision, and action into discrete tokens and concatenate them into a single multimodal sequence with special markers <code>&lt;BOI&gt;</code>/<code>&lt;EOI&gt;</code> and <code>&lt;BOA&gt;</code>/<code>&lt;EOA&gt;</code>.
+        </p>
+        <div style="text-align: center; margin: 1em 0;">
+          \[
+            [\text{text tokens} ; \text{current image tokens} ; \text{future image tokens} ; \text{action tokens}]
+          \]
+        </div>
+      </div>
+  
+      <!------- Key Finding 4. ------->
+      <!------------------------------>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <p style="font-size: 21px; text-align: justify;">
+          <b><a href="#q1-2">Hybrid Attention Mechanism</a></b>:
+        </p>
+      </div>
+      <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+              Text and current image use causal and bidirectional attention, respectively. Future-image tokens form a generation block and action tokens an acting block; each block is bidirectional, while cross-block attention is causal (acting attends to both input and generated image, no action-to-vision flow).
+            </p>
+          </div>
+          <div class="column is-half">
+            <img src="./static/images/attention.png" alt="Hybrid Attention Mechanism" style="width: 60%; height: auto;">
+          </div>
+        </div>
+      </div>
+  
+      <!------- Key Finding 5. ------->
+      <!------------------------------>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <p style="font-size: 21px; text-align: justify;">
+          <b><a href="#q1-3">Joint Discrete Denoising Diffusion Process (JD3P)</a></b>:
+        </p>
+      </div>
+      <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+        <div class="columns is-vcentered">
+          <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+            <div style="padding-right: 2.5rem; box-sizing: border-box;">
+              <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+                <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+                    Actions and images are generated in parallel within one denoising step. With future-image tokens \(\mathbf{v}_0\) and action tokens \(\mathbf{a}_0\), the joint sequence is
+                  </p>
+                  <div style="text-align: center; margin: 1em 0;">
+                    \[
+                      \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
+                    \]
+                  </div>
+                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+                    We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
+                  </p>
+                  <div style="text-align: center; margin: 1em 0;">
+                    \[
+                      \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
+                    \]
+                  </div>
+                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+                    The denoising factorizes as
+                  </p>
+                  <div style="text-align: center; margin: 1em 0;">
+                    \[
+                      p_\theta(\mathbf{v}_{t-1},\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})
+                      = p_\theta(\mathbf{v}_{t-1}\mid \mathbf{v}_t,\mathbf{c})\;
+                        p_\theta(\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c}).
+                    \]
+                  </div>
+                </div>
+                  </p>              
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!------- Key Finding 6. ------->
+      <!------------------------------>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <p style="font-size: 21px; text-align: justify;">
+          <b><a href="#q1-4">Loss Function</a></b>:
+        </p>
+      </div>
+      <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+        <div class="columns is-vcentered">
+          <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+            <div style="padding-right: 0.5rem; box-sizing: border-box;">
+              <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+                We adopt a single-step mask-predict objective, computing cross-entropy only on masked positions:
+              </p>
+              <div style="text-align: center; margin: 1em 0;">
+                \[
+                  \mathcal{L}_{\text{CE}}(\theta)
+                               = - \beta \sum_{j}^{L_v} \log p_\theta^{(v)}(v_{0,j}\mid \mathbf{v}_t,\mathbf{c})\, \mathbf{1}\{v_{t,j}=\mathrm{M}\}
+                     - \sum_{i}^{L_a} \log p_\theta^{(a)}(a_{0,i}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})\, \mathbf{1}\{a_{t,i}=\mathrm{M}\}.
+                 \]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <!------------------------------------------------------------------------------------>
+      <!----------------------------------- 2.2 Training Details ------------------------------>
+      <!------------------------------------------------------------------------------------>
+      <div class="container is-max-desktop" style="margin-top: 3rem;">
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; font-size: 26px;">
+          2.2 Training
+        </h2>
+        <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            We initialize our model from a pretrained VLM backbone (Emu3), which is trained in an autoregressive manner with causal attention.
+          </p>
+          <ol style="font-size: 19px; text-align: justify; padding-left: 2em;">
+            <li><b>Stage (i):</b> Post-train on a large-scale video dataset to inject capabilities of future image generation into the VLA, enabling the robot to understand and model future states. The token sequences are constructed as:</li>
+            <div style="text-align: center; margin: 1em 0;">
+              \[
+                [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}].
+              \]
+            </div>
+            <li><b>Stage (ii):</b> Jointly optimize image and action generation under a unified framework on the downstream robot action dataset. The token sequences are constructed as the full multimodal sequence. Reformulate autoregressive decoding as a diffusion process following JD3P, adopting a shift operation strategy to predict the next token. This enables the model to inherit capacity learned from next-token-prediction training while gaining the advantages of bidirectional context and parallel decoding.</li>
           </ol>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper method -->
 
-<!-- Paper pretraining -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Questions &amp; Key Findings</h2>
-        <div class="content has-text-justified">
-          <figure class="image is-16by4" >
-            <img src="static/images/attention.png" alt="Hybrid attention overview"  style="width:50% ; height:50% ;">
-          </figure>
-          <p><b>Unified Tokenization.</b> We convert language, vision, and action into discrete tokens and concatenate them into a single multimodal sequence with special markers <code>&lt;BOI&gt;</code>/<code>&lt;EOI&gt;</code> and <code>&lt;BOA&gt;</code>/<code>&lt;EOA&gt;</code>.</p>
-          \[
-            [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}\;;\;\text{action tokens}\;]
-          \]
-          <p><b>Hybrid Attention Mechanism.</b> Text and current image use causal and bidirectional attention, respectively. Future-image tokens form a generation block and action tokens an acting block; each block is bidirectional, while cross-block attention is causal (acting attends to both input and generated image, no action-to-vision flow).</p>
-          <p><b>Joint Discrete Denoising Diffusion Process (JD3P).</b> Actions and images are generated in parallel within one denoising step. With future-image tokens \(\mathbf{v}_0\) and action tokens \(\mathbf{a}_0\), the joint sequence is
-          \[
-            \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
-          \]
-          We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
-          \[
-            \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
-          \]
-          The denoising factorizes as
-          \[
-            p_\theta(\mathbf{v}_{t-1},\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})
-            = p_\theta(\mathbf{v}_{t-1}\mid \mathbf{v}_t,\mathbf{c})\;
-              p_\theta(\mathbf{a}_{t-1}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c}).
-          \]
+      <!------------------------------------------------------------------------------------>
+      <!----------------------------------- 2.3 Inference Details ---------------------------->
+      <!------------------------------------------------------------------------------------>
+      <div class="container is-max-desktop" style="margin-top: 3rem;">
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; font-size: 26px;">
+          2.3 Inference
+        </h2>
+        <div class="container is-max-desktop" style="margin-top: 0.5rem;">
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            At inference, the denoising process uses parallel decoding with adaptive masking: all positions of \(\mathbf{v}_T\) and \(\mathbf{a}_T\) are initialized as <code>&lt;MASK&gt;</code>, token distributions for all positions are predicted in parallel, and this is repeated for a small number of iterations.
           </p>
-          <p><b>Loss.</b> We adopt a single-step mask-predict objective, computing cross-entropy only on masked positions:
-          \[
-            \mathcal{L}_{\text{CE}}(\theta)
-                         = - \beta \sum_{j}^{L_v} \log p_\theta^{(v)}(v_{0,j}\mid \mathbf{v}_t,\mathbf{c})\, \mathbf{1}\{v_{t,j}=\mathrm{M}\}
-               - \sum_{i}^{L_a} \log p_\theta^{(a)}(a_{0,i}\mid \mathbf{v}_t,\mathbf{a}_t,\mathbf{c})\, \mathbf{1}\{a_{t,i}=\mathrm{M}\}.
-           \]
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            <b>Prefix KV Cache and Pre-filling Tokens.</b> Employ prefix KV-Cache to cache keys and values of current visual and prompt tokens. Pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, and <code>&lt;BOA&gt;</code> at corresponding positions to guide denoising of visual and action tokens, reducing latency and improving speed.
           </p>
-          <p><b>Training.</b> Initialize from a pretrained VLM. 
-            <ol>
-              <b>Stage (i):</b> Post-train on large-scale videos to learn future image generation with sequences
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            <b>Confidence-Guided Decoding.</b> Initialize with noise at \(t=T\) and iterate backward to \(t=0\) using cosine mask schedule \(\rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right)\). Rank masked positions by confidence score:
+          </p>
+          <div style="text-align: center; margin: 1em 0;">
             \[
-              [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}\;].
+              q_{t-1,r}=\max_{\ell}\begin{cases}
+              p_\theta\!\big(\ell \mid \mathbf v_t,\mathbf u\big), & r\in\{1,\ldots,L_v\},\\[6pt]
+              p_\theta\!\big(\ell \mid \mathbf v_t,\mathbf a_t,\mathbf u\big), & r\in\{L_v+1,\ldots,L_v+L_a\}.
+              \end{cases}
             \]
-            <b>Stage (ii):</b> Jointly train future image and action under JD3P on downstream robot datasets. We reformulate AR decoding as diffusion with a shift operation to predict the next token, preserving next-token skills while gaining bidirectional context and parallel decoding.</p>
-          </ol>
-            <p><b>Inference.</b> Parallel decoding with adaptive masking: initialize \(\mathbf v_T,\mathbf a_T\) as <code>&lt;MASK&gt;</code>, predict all positions in parallel for a few iterations. Use prefix KV-Cache for prompt/current image and pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, <code>&lt;BOA&gt;</code> to guide denoising. Apply a cosine mask schedule
+          </div>
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            Update top \((1-\rho_t)|M_t|\) entries via tempered Gumbel sampling:
+          </p>
+          <div style="text-align: center; margin: 1em 0;">
             \[
-              \rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right),\quad t=T,\dots,1.
+              v_{t-1,j},a_{t-1,i} = 
+              \arg\max\limits_{y}\Bigl[\tfrac{1}{\kappa_t}\log p_\theta(y \mid \mathbf v_t,\mathbf a_t,\mathbf u) + \eta_c\Bigr],
+              \;\; \eta_c \stackrel{\text{i.i.d.}}{\sim} \mathrm{Gumbel}(0,1).
             \]
-            Restrict logits to each modality’s codebook (decoding space mapping), and once <code>&lt;EOA&gt;</code> appears at index \(i^*\), fix action length by masking later positions.</p>
+          </div>
+          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+            <b>Decoding Space Mapping.</b> Restrict classification space to each modality's codebook to prevent wrong-modality tokens and stabilize generation. Once <code>&lt;EOA&gt;</code> is predicted at \(i^\star\), set subsequent tokens to <code>&lt;PAD&gt;</code> and exclude from refinement.
+          </p>
         </div>
       </div>
+
     </div>
-  </div>
-</section>
-<!-- End paper pretraining -->
+  </section>
+  
+  
+  
+  
+  <!------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------>
+  <!--------------------------------------- 3. Results --------------------------------------->
+  <!------------------------------------------------------------------------------------------>
+  <section class="section">
+      <!-- Animation. -->
+      <div class="columns is-centered">
+        <div class="container is-max-desktop" style="top: 3px;">
+          <h2 id="Results" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 1rem;">3. Results</h2>
+  
+  
+          <!------------------------------------------------------------------------------------>
+          <!--------------- 3.1 Numerical Comparison on The Different Benchmarks --------------->
+          <!------------------------------------------------------------------------------------>
+          <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; font-size: 26px;">
+            3.1 Numerical Comparison on The Different Benchmarks</h2>
+  
+            <!------------------------------------------------------------------------------------>
+            <!------------------------------ 3.1.1 LIBERO Benchmark ------------------------------>
+            <!------------------------------------------------------------------------------------>
+          <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; font-size: 22px;">
+            3.1.1  <a href="https://libero-project.github.io/main.html" target="_blank" rel="noopener" title="LIBERO">
+          LIBERO</a> Benchmark</h2>
+  
+          <!------ Table 5. ------>
+          <!---------------------->
+          <div class="container is-max-desktop" style="margin-top: 0rem;">
+            <figure style="text-align: center; font-size: 19px;">
+              <figcaption>
+              </figcaption>
+              <img src="./static/images/LIBERO.png" alt="Framework" style="width: 870px;">
+            </figure>
+          </div>
+  
+          <!------------------------------------------------------------------------------------>
+          <!------------------------------ 3.1.2 CALVIN Benchmark ------------------------------>
+          <!------------------------------------------------------------------------------------>
+          <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 2.5rem; font-size: 22px;">
+            3.1.2 <a href="http://calvin.cs.uni-freiburg.de/" target="_blank" rel="noopener" title="CALVIN">
+          CALVIN</a> Benchmark</h2>
+  
+          <!------ Table 6. ------>
+          <!---------------------->
+          <div class="container is-max-desktop" style="margin-top: 0rem;">
+            <figure style="text-align: center; font-size: 19px;">
+              <figcaption>
+              </figcaption>
+              <img src="./static/images/CALVIN.png" alt="Framework" style="width: 870px;">
+            </figure>
+          </div>
+  
+          <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 2.5rem; font-size: 22px;">
+            3.1.3 <a href="https://simpler-env.github.io/" target="_blank" rel="noopener" title="CALVIN">
+              SimplerEnv-WidowX</a> Benchmark</h2>
+  
+          <!------ Table 6. ------>
+          <!---------------------->
+          <div class="container is-max-desktop" style="margin-top: 0rem;">
+            <figure style="text-align: center; font-size: 19px;">
+              <figcaption>
+              </figcaption>
+              <img src="./static/images/CALVIN.png" alt="Framework" style="width: 870px;">
+            </figure>
+          </div>
 
-
-<!-- Paper Experiments -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-          <h3 class="title is-4  has-text-centered">Evaluation of Long-Horizon Robotic Manipulation on the CALVIN Benchmark</h3>
+          <!------------------------------------------------------------------------------------>
+          <!---------------------------- 3.1.3 Real-World Benchmark ---------------------------->
+          <!------------------------------------------------------------------------------------>
+  <!--        <h2 class="title is-4"-->
+  <!--            style="font-family: 'Google Sans', sans-serif; margin-top: 2.5rem; font-size: 22px;">-->
+  <!--          3.1.3 Real-World Benchmark</h2>-->
+  
+  <!--        &lt;!&ndash;&#45;&#45;&#45;&#45; Fig 6. &#45;&#45;&#45;&#45;&ndash;&gt;-->
+  <!--        &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+  <!--        <div class="container is-max-desktop" style="margin-top: 1.5rem;">-->
+  <!--          <figure style="text-align: center; font-size: 19px;">-->
+  <!--            <img src="./static/images/Com.png" alt="Framework" style="width: 870px;" />-->
+  <!--            <figcaption><b>Figure 6.</b>-->
+  <!--            </figcaption>-->
+  <!--          </figure>-->
+  <!--        </div>-->
+  
+        <!------------------------------------------------------------------------------------>
+        <!-------------------------- 3.1.4 In-depth Analysis ----------------------------->
+        <!------------------------------------------------------------------------------------>
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 3rem; font-size: 22px;">
+          3.1.4 In-depth Analysis</h2>
+  
           <div class="content has-text-justified">
-            <figure class="image is-16by4" >
-              <img src="static/images/CALVIN.png" alt="UD-VLA architecture"  style="width:100% ; height:100% ;">
-            </figure>
-          </div>
-          <h3 class="title is-4  has-text-centered">Evaluation and comparison on the LIBERO benchmark</h3>
-          <div class="content has-text-justified">
-            <figure class="image is-16by4" >
-              <img src="static/images/LIBERO.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
-            </figure>
-          </div>
-          <h3 class="title is-4  has-text-centered">Evaluation results on SimplerEnv-WidowX</h3>
-          <div class="content has-text-justified">
-            <figure class="image is-16by4" >
-              <img src="static/images/simplerenv.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
-            </figure>
-          </div>
-          <h3 class="title is-4  has-text-centered">In-Depth Analysis</h3>
-          <div class="content has-text-justified">
-            <p><b>Effectiveness of Hybrid Attention Mechanism.</b> 
-              <ul>
+            <p><b>Effectiveness of Hybrid Attention Mechanism:</b> 
+              </p><ul>
                 <li><b>Causal</b> denotes causal attention.</li>
                 <li><b>Bdirectional</b> denotes bidirectional attention.</li>
                 <li><b>Hybrid (ours)</b> denotes our proposed hybrid attention mechanism.</li>
               </ul>
-            </p>
-            <table class="table is-striped is-hoverable is-fullwidth">
+            <p></p>
+            <table class="table is-striped is-hoverable is-fullwidth" style="border: 1px solid black;">
               <thead>
                 <tr><th>Attention setting</th><th>Avg success length</th></tr>
               </thead>
@@ -357,14 +674,14 @@
               </tbody>
             </table>
 
-            <p><b>Effectiveness of Future Image Generation.</b> 
-              <ul>
+            <p><b>Effectiveness of Future Image Generation:</b> 
+              </p><ul>
                 <li><b>Null</b> denotes action prediction without visual generation.</li>
                 <li><b>Current Image</b> denotes reconstruct current observation.</li>
                 <li><b>Predict future frames (ours)</b> denotes predict future frames and actions.</li>
               </ul>
-            </p>
-            <table class="table is-striped is-hoverable is-fullwidth">
+            <p></p>
+            <table class="table is-striped is-hoverable is-fullwidth" style="border: 1px solid black;">
               <thead>
                 <tr><th>Setting</th><th>Outcome</th></tr>
               </thead>
@@ -375,15 +692,15 @@
               </tbody>
             </table>
 
-            <p><b>Effectiveness of JD3P.</b> 
-              <ul>
+            <p><b>Effectiveness of JD3P:</b> 
+              </p><ul>
                 <li><b>Autoregressive (AR)</b> denotes autoregressive decoding.</li>
                 <li><b>Jacobi (AR)</b> denotes Jacobi decoding.</li>
                 <li><b>Independent diffusion</b> denotes independent diffusion decoding.</li>
                 <li><b>JD3P (ours)</b> denotes our proposed JD3P decoding.</li>
               </ul>
-            </p>
-            <table class="table is-striped is-hoverable is-fullwidth">
+            <p></p>
+            <table class="table is-striped is-hoverable is-fullwidth" style="border: 1px solid black;">
               <thead>
                 <tr><th>Method</th><th>Avg length</th><th>Speed</th></tr>
               </thead>
@@ -395,54 +712,396 @@
               </tbody>
             </table>
           </div>
+  
+  
+  
+        <!------------------------------------------------------------------------------------>
+        <!---------------- 3.2 Execution Examples on The Different Benchmarks ---------------->
+        <!------------------------------------------------------------------------------------>
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
+          3.2 Execution Examples on The Different Benchmarks</h2>
+  
+        <!------------------------------------------------------->
+        <!---------------- 3.2.1 LIBERO-Spatial  ---------------->
+        <!------------------------------------------------------->
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
+          3.2.1 LIBERO-Spatial </h2>
+        <style>
+          .video-container {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;}
+          .video-item {width: 13.3%; display: flex; flex-direction: column; align-items: center; text-align: center;}
+          .video-item video {width: 100%; height: auto;}
+          .caption {margin-top: 5px; font-size: 13px; color: #555;}
+        </style>
+  
+        <div class="video-container">
+          <div class="video-item">
+            <video id="teaserl1s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s1.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl between the plate and the ramekin and place it on the plate </div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl2s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s2.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl next to the ramekin and place it on the plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl3s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s3.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl from table center and place it on the plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl4s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s4.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl on the cookie box and place it on the plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl5s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s5.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl6s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s6.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl on the stove and place it on the plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl7s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/s7.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the black bowl next to the plate and place it on the plate</div>
+          </div>
         </div>
+  
+        <!------------------------------------------------------->
+        <!---------------- 3.2.2 LIBERO-Object  ----------------->
+        <!------------------------------------------------------->
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
+          3.2.2 LIBERO-Object </h2>
+        <div class="video-container">
+          <div class="video-item">
+            <video id="teaserl1o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long1.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the alphabet soup and place it in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl2o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long2.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the salad dressing and place it in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl3o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long3.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the bbq sauce and place it in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl4o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long4.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the ketchup and place it in the basket </div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl5o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long5.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the tomato sauce and place it in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl6o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long6.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the milk and place it in the basket  </div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl7o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/Long7.mp4" type="video/mp4">
+            </video><div class="caption">Pick up the chocolate pudding and place it in the basket </div>
+          </div>
+        </div>
+  
+        <!------------------------------------------------------->
+        <!----------------- 3.2.3 LIBERO-Goal  ------------------>
+        <!------------------------------------------------------->
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
+          3.2.3 LIBERO-Goal</h2>
+        <div class="video-container">
+          <div class="video-item">
+            <video id="teaserl1" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g1.mp4" type="video/mp4">
+            </video><div class="caption">Open the middle drawer of the cabinet </div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl2" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g2.mp4" type="video/mp4">
+            </video><div class="caption">Put the bowl on the stove</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl3" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g3.mp4" type="video/mp4">
+            </video><div class="caption">Put the wine bottle on top of the cabinet</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl4" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g4.mp4" type="video/mp4">
+            </video><div class="caption">Open the top drawer and put the bowl inside</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl5" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g5.mp4" type="video/mp4">
+            </video><div class="caption">Put the bowl on top of the cabinet </div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl6" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g6.mp4" type="video/mp4">
+            </video><div class="caption">Push the plate to the front of the stove</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserl7" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/g7.mp4" type="video/mp4">
+            </video><div class="caption">Put the wine bottle on the rack</div>
+          </div>
+        </div>
+  
+        <!------------------------------------------------------->
+        <!----------------- 3.2.4 LIBERO-Long  ------------------>
+        <!------------------------------------------------------->
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
+          3.2.4 LIBERO-Long</h2>
+        <div class="video-container">
+          <div class="video-item">
+            <video id="teaser2" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/12.mp4" type="video/mp4">
+            </video><div class="caption">Put both the cream cheese box and the butter in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser4" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/14.mp4" type="video/mp4">
+            </video><div class="caption">Put the black bowl in the bottom drawer of the cabinet and close it</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser8" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/13.mp4" type="video/mp4">
+            </video><div class="caption">Turn on the stove and put the moka pot on it</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser10" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/15.mp4" type="video/mp4">
+            </video><div class="caption">Put the white mug on the left plate and put the yellow and white mug on the right plate</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser14" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/19.mp4" type="video/mp4">
+            </video><div class="caption">Put both moka pots on the stove</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser18" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/18.mp4" type="video/mp4">
+            </video><div class="caption">Put both the alphabet soup and the cream cheese box in the basket</div>
+          </div>
+          <div class="video-item">
+            <video id="teaser20" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/20.mp4" type="video/mp4">
+            </video><div class="caption">Put the yellow and white mug in the microwave and close it</div>
+          </div>
+        </div>
+  
+        <!------------------------------------------------------->
+        <!---------------- 3.2.5 CALVIN ABC->D  ----------------->
+        <!------------------------------------------------------->
+        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
+          3.2.5 CALVIN ABC-&gt;D</h2>
+        <div class="video-container">
+          <div class="video-item">
+            <video id="teaserc11" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/1.mp4" type="video/mp4">
+            </video><div class="caption">Open drawer➝Lift pink block table➝Place in slider➝Turn on lightbulb➝Rotate blue block left</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc51" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/5.mp4" type="video/mp4">
+            </video><div class="caption">Lift red block table➝Place in drawer➝Rotate blue block right➝Lift pink block slider ➝Stack block</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc7" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/2.mp4" type="video/mp4">
+            </video><div class="caption">Move slider right➝Turn on lightbulb➝Push pink block left➝Open drawer➝Push into drawer</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc9" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/4.mp4" type="video/mp4">
+            </video><div class="caption">Push pink block right➝Lift red block table➝Stack block➝Move slider left➝Unstack block</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc111" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/6.mp4" type="video/mp4">
+            </video><div class="caption">Turn off led➝Close drawer➝Move slider left➝Push pink block right➝Lift red block slider</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc13" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/8.mp4" type="video/mp4">
+            </video><div class="caption">Push into drawer➝Close drawer➝Move slider right ➝Lift pink block slider➝Place in slider</div>
+          </div>
+          <div class="video-item">
+            <video id="teaserc19" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
+              <source src="./static/videos/9.mp4" type="video/mp4">
+            </video><div class="caption">Turn off lightbulb➝Move slider left➝Push blue block left➝Lift pink block slider➝ Stack block</div>
+          </div>
+        </div>
+  
+        <!------------------------------------------------------->
+        <!----------------- 3.2.6 Real-World  ------------------->
+        <!------------------------------------------------------->
+  <!--      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">-->
+  <!--        3.2.6 Real-World</h2>-->
+  
+  
+  
+      <!------------------------------------------------------------------------------------>
+      <!------------------------------ 3.3 Keyframe Examples ------------------------------->
+      <!------------------------------------------------------------------------------------>
+      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
+        3.3 Keyframe Examples</h2>
+  
+          <div class="content has-text-justified" style="font-family: 'Google Sans', sans-serif;">
+            <p style="font-size: 19px;">
+              We give two keyframe examples of the key frames of the robot arm performing a task.
+              You can drag the progress bar in the middle bottom to view it.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
+              <img src="./static/images/start.jpg" class="interpolation-image" alt="Interpolate start reference image.">
+              <p style="font-size: 19px;">Start RGB observation and Proprio. state</p>
+            </div>
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper"><img src="./static/interpolation/stacked/000000.jpg" style="width: 300px; height: auto; display: block; margin: 0px auto;"></div>
+              <div style="display: flex; justify-content: center;">
+                <input class="slider is-large is-info" id="interpolation-slider" style="width: 300px;" step="1" min="0" max="181" value="0" type="range">
+              </div>
+            </div>
+            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
+              <img src="./static/images/end.jpg" class="interpolation-image" alt="Interpolation end reference image.">
+              <p style="font-size: 19px;">End RGB observation and Proprio. state</p>
+            </div>
+          </div>
+  
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
+              <img src="./static/images/start.jpg" class="interpolation-image" alt="Interpolate start reference image.">
+              <p style="font-size: 19px;">Start RGB observation and Proprio. state</p>
+            </div>
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper"><img src="./static/interpolation/stacked/000000.jpg" style="width: 300px; height: auto; display: block; margin: 0px auto;"></div>
+              <div style="display: flex; justify-content: center;">
+                <input class="slider is-large is-info" id="interpolation-slider" style="width: 300px;" step="1" min="0" max="181" value="0" type="range">
+              </div>
+            </div>
+            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
+              <img src="./static/images/end.jpg" class="interpolation-image" alt="Interpolation end reference image.">
+              <p style="font-size: 19px;">End RGB observation and Proprio. state</p>
+            </div>
+          </div>
+
+          <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
+            3.4 Real-World Experiment</h2>
+            <div class="content has-text-justified">
+              <figure class="image is-16by4" >
+                <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+              </figure>
+              <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
+              <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
+            </div>
+
+  
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper experiments -->
+  </section>
+  
 
-<!-- Paper method -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">REAL-WORLD EXPERIMENT</h2>
-        <div class="content has-text-justified">
-          <figure class="image is-16by4" >
-            <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
-          </figure>
-          <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
-          <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  
+  
+  
+  
 
 
-<!--BibTex citation -->
+  
+  
+  
+  
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>
-        @misc{udvla2025,
-          title={Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process},
-          author={Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li},
-          year={2025},
-          url={https://arxiv.org/abs/}
-        }
-      </code></pre>
+      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif;">BibTeX</h2>
+      <pre id="bibtex-code" style="font-family: 'Google Sans', sans-serif; font-size: 18px; padding: 1rem; background: #f5f5f5; border-radius: 5px; white-space: pre;">      <code>
+          @article{udvla2025,
+            title={Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process},
+            author={Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li},
+            year={2025},
+            url={https://arxiv.org/abs/}
+          }
+        </code></pre>
+      <button type="button" id="copy-btn" style="position: absolute; top: 5px; right: 5px; padding: 5px 10px; font-size: 14px; cursor: pointer;">
+      ☑ Copy
+    </button>
     </div>
-</section>
-<!--End BibTex citation -->
-
-
-<!-- Statcounter tracking code -->
+    <script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+    const pre = document.querySelector('#bibtex-code code');
   
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        return true;
+      } catch (e) {
+        return false;
+      } finally {
+        document.body.removeChild(ta);
+      }
+    }
+  
+    btn.addEventListener('click', async function () {
+      const code = pre ? pre.innerText : '';
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.textContent = '✅ Copied';
+          setTimeout(()=> btn.textContent = '📋 Copy', 1200);
+          return;
+        } catch (e) {}
+      }
+      const ok = fallbackCopy(code);
+      btn.textContent = ok ? '✅ Copied' : '❌ Failed';
+      setTimeout(()=> btn.textContent = '📋 Copy', 1200);
+    });
+  })();
+  </script>
+  </section>
+  
+  
+  
+  
+  
+  
+  <div id="aiknowledge_pdf_auto_upload" style="position: fixed; top: 8px; right: 8px; z-index: 9999; background-color: white;"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://nchidjaafkcjdgdbbdpkpokodiehhcdg/content-script/style.css"><div data-v-app=""><main class="content-script-container" data-v-f5c2522d="" style="display: none;"><div class="banner neutral-10-b" data-v-f5c2522d=""><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODUiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA4NSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjEzODJMMy44Mzk3MiAzLjkzMzRDNC42MzIwMyAyLjY1Mjg2IDYuMDIxNzggMS44NzUgNy41MTY4NiAxLjg3NUMxMC45MjI4IDEuODc1IDEyLjk5OTEgNS42NTg2MyAxMS4xOTQgOC41NzU1N0wxMC4zNTcyIDkuOTI3NzVMMTUuMjAxIDE4LjQwMUgxMi43NTg4TDkuMDg3NyAxMS45NzkyTDYuNDMwMTQgMTYuMjczNUgxMC4zNDU2TDExLjQzNCAxOC40MDEzSDUuMTEzODJWMTguNDAwNkw1LjExMzQyIDE4LjQwMTJMMCAxMC4xMzgyWk03Ljg5NjU0IDkuODkwMDdINy44OTM0NEw3Ljg5NDkzIDkuODkyNjdMNS4xMTM4OSAxNC4zODY1TDIuNDg0ODUgMTAuMTM4MUw1LjYyNjcgNS4wNjEwMkM2LjAzNjgyIDQuMzk4MjMgNi43NDM2MyA0LjAwMjY1IDcuNTE3MzMgNC4wMDI2NUM4LjcwMjczIDQuMDAyNjUgOS4yNzU5NCA0LjgxNDAyIDkuNDY3MyA1LjE2Mjc5QzkuNjU4ODQgNS41MTE3NCAxMC4wMzYxIDYuNDMyNjkgOS40MDc5NiA3LjQ0NzhMNy44OTY1NCA5Ljg5MDA3WiIgZmlsbD0iIzFGNzFFMCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIwLjA5NDMgNS40MzI1QzIxLjQ3NDYgNS40MzI1IDIyLjUyODIgNS42ODgwNyAyMy4yNTUxIDYuMTk5MjFDMjMuOTkxMyA2LjcxMDM1IDI0LjM1OTMgNy40OTEgMjQuMzU5MyA4LjU0MTE2QzI0LjM1OTMgOS44NTE1MyAyMy43MTk4IDEwLjczOTEgMjIuNDQwOCAxMS4yMDM3QzIyLjYxNTYgMTEuNDE3NSAyMi44MTM0IDExLjY3NzcgMjMuMDM0MyAxMS45ODQ0QzIzLjI1NTEgMTIuMjkxMSAyMy40ODA2IDEyLjYyNTYgMjMuNzEwNiAxMi45ODgxQzIzLjk0MDcgMTMuMzQxMiAyNC4xNjE1IDEzLjcwODMgMjQuMzczMiAxNC4wODkzQzI0LjU4NDggMTQuNDYxMSAyNC43NzM0IDE0LjgyODIgMjQuOTM5MSAxNS4xOTA2SDIyLjk5MjlDMjIuODE4MSAxNC44NTYxIDIyLjYyOTQgMTQuNTIxNSAyMi40MjcgMTQuMTg2OUMyMi4yMjQ1IDEzLjg0MzEgMjIuMDE3NSAxMy41MTMyIDIxLjgwNTkgMTMuMTk3MkMyMS42MDM0IDEyLjg3MTkgMjEuNDAxIDEyLjU2OTkgMjEuMTk4NSAxMi4yOTExQzIwLjk5NjEgMTIuMDAzIDIwLjgwNzUgMTEuNzQ3NCAyMC42MzI2IDExLjUyNDRDMjAuNTAzOCAxMS41MzM2IDIwLjM5MzQgMTEuNTM4MyAyMC4zMDE0IDExLjUzODNDMjAuMjA5MyAxMS41MzgzIDIwLjEyMTkgMTEuNTM4MyAyMC4wMzkxIDExLjUzODNIMTkuMTk3MVYxNS4xOTA2SDE3LjQ1OFY1LjY2OTQ4QzE3Ljg4MTMgNS41NzY1NSAxOC4zMzIyIDUuNTE2MTQgMTguODEwNyA1LjQ4ODI2QzE5LjI4OTIgNS40NTEwOSAxOS43MTcgNS40MzI1IDIwLjA5NDMgNS40MzI1Wk0yMC4yMTg1IDYuOTUxOThDMTkuODUwNSA2Ljk1MTk4IDE5LjUxIDYuOTY1OTIgMTkuMTk3MSA2Ljk5MzhWMTAuMTE2NEgxOS45NTYzQzIwLjM3OTYgMTAuMTE2NCAyMC43NTIyIDEwLjA5MzIgMjEuMDc0MyAxMC4wNDY3QzIxLjM5NjQgMTAuMDAwMiAyMS42NjMyIDkuOTE2NTkgMjEuODc0OSA5Ljc5NTc3QzIyLjA5NTcgOS42NzQ5NiAyMi4yNjEzIDkuNTEyMzIgMjIuMzcxOCA5LjMwNzg3QzIyLjQ4MjIgOS4xMDM0MSAyMi41Mzc0IDguODQzMTkgMjIuNTM3NCA4LjUyNzIyQzIyLjUzNzQgOC4yMjk4MyAyMi40ODIyIDcuOTc4OSAyMi4zNzE4IDcuNzc0NDVDMjIuMjYxMyA3LjU2OTk5IDIyLjEwMDMgNy40MDczNiAyMS44ODg3IDcuMjg2NTRDMjEuNjg2MiA3LjE2NTczIDIxLjQ0MjQgNy4wODIwOSAyMS4xNTcxIDcuMDM1NjJDMjAuODcxOSA2Ljk3OTg2IDIwLjU1OSA2Ljk1MTk4IDIwLjIxODUgNi45NTE5OFpNMjUuNjE1NiAxMS41ODAxQzI1LjYxNTYgMTAuOTM4OSAyNS43MDc2IDEwLjM3NjYgMjUuODkxNiA5Ljg5MzM1QzI2LjA4NDggOS40MTAwOSAyNi4zMzc5IDkuMDEwNDggMjYuNjUwOCA4LjY5NDVDMjYuOTYzNiA4LjM2OTIzIDI3LjMyMjUgOC4xMjc2IDI3LjcyNzQgNy45Njk2MUMyOC4xMzIyIDcuODAyMzMgMjguNTQ2MyA3LjcxODY5IDI4Ljk2OTYgNy43MTg2OUMyOS45NjM0IDcuNzE4NjkgMzAuNzM2NCA4LjAzMDAyIDMxLjI4ODUgOC42NTI2OEMzMS44NDk4IDkuMjc1MzQgMzIuMTMwNCAxMC4yMDQ3IDMyLjEzMDQgMTEuNDQwN0MzMi4xMzA0IDExLjUzMzYgMzIuMTI1OCAxMS42NDA1IDMyLjExNjYgMTEuNzYxM0MzMi4xMTY2IDExLjg3MjkgMzIuMTEyIDExLjk3NTEgMzIuMTAyOCAxMi4wNjhIMjcuMzQwOUMyNy4zODY5IDEyLjY1MzUgMjcuNTg5MyAxMy4xMDg5IDI3Ljk0ODIgMTMuNDM0MkMyOC4zMTYzIDEzLjc1MDEgMjguODQ1NCAxMy45MDgxIDI5LjUzNTUgMTMuOTA4MUMyOS45NDA0IDEzLjkwODEgMzAuMzA4NSAxMy44NzA5IDMwLjYzOTcgMTMuNzk2NkMzMC45ODAyIDEzLjcyMjMgMzEuMjQ3MSAxMy42NDMzIDMxLjQ0MDMgMTMuNTU5NkwzMS42NjExIDE0LjkzOTdDMzEuNTY5MSAxNC45ODYyIDMxLjQ0MDMgMTUuMDM3MyAzMS4yNzQ3IDE1LjA5M0MzMS4xMTgyIDE1LjEzOTUgMzAuOTM0MiAxNS4xODEzIDMwLjcyMjYgMTUuMjE4NUMzMC41MjAxIDE1LjI2NSAzMC4yOTkzIDE1LjMwMjEgMzAuMDYgMTUuMzNDMjkuODIwOCAxNS4zNTc5IDI5LjU3NjkgMTUuMzcxOCAyOS4zMjg1IDE1LjM3MThDMjguNjkzNiAxNS4zNzE4IDI4LjE0MTQgMTUuMjc4OSAyNy42NzIyIDE1LjA5M0MyNy4yMDI5IDE0Ljg5NzkgMjYuODE2NCAxNC42MzMgMjYuNTEyNyAxNC4yOTg0QzI2LjIwOTEgMTMuOTU0NiAyNS45ODM2IDEzLjU1NSAyNS44MzY0IDEzLjA5OTZDMjUuNjg5MiAxMi42MzQ5IDI1LjYxNTYgMTIuMTI4NCAyNS42MTU2IDExLjU4MDFaTTMwLjQ2MDMgMTAuODI3M0MzMC40NjAzIDEwLjU5NSAzMC40MjgxIDEwLjM3NjYgMzAuMzYzNyAxMC4xNzIyQzMwLjI5OTMgOS45NTg0MSAzMC4yMDI3IDkuNzc3MTkgMzAuMDczOCA5LjYyODQ5QzI5Ljk1NDIgOS40NzA1IDI5LjgwMjQgOS4zNDk2OSAyOS42MTgzIDkuMjY2MDVDMjkuNDQzNSA5LjE3MzExIDI5LjIzMTkgOS4xMjY2NSAyOC45ODM0IDkuMTI2NjVDMjguNzI1OCA5LjEyNjY1IDI4LjUwMDMgOS4xNzc3NiAyOC4zMDcxIDkuMjc5OTlDMjguMTEzOCA5LjM3MjkyIDI3Ljk0ODIgOS40OTgzOCAyNy44MTAyIDkuNjU2MzdDMjcuNjgxNCA5LjgxNDM2IDI3LjU4MDEgOS45OTU1OCAyNy41MDY1IDEwLjJDMjcuNDMyOSAxMC40MDQ1IDI3LjM4MjMgMTAuNjEzNiAyNy4zNTQ3IDEwLjgyNzNIMzAuNDYwM1pNMzYuMjUyNiAxNC4wMDU3QzM2Ljc2NzkgMTQuMDA1NyAzNy4xNTkgMTMuOTc3OCAzNy40MjU5IDEzLjkyMjFWMTIuMDU0MUMzNy4zMzM4IDEyLjAyNjIgMzcuMjAwNCAxMS45OTgzIDM3LjAyNTYgMTEuOTcwNEMzNi44NTA3IDExLjk0MjYgMzYuNjU3NSAxMS45Mjg2IDM2LjQ0NTkgMTEuOTI4NkMzNi4yNjE4IDExLjkyODYgMzYuMDczMiAxMS45NDI2IDM1Ljg4IDExLjk3MDRDMzUuNjk1OSAxMS45OTgzIDM1LjUyNTcgMTIuMDQ5NCAzNS4zNjkzIDEyLjEyMzhDMzUuMjIyIDEyLjE5ODEgMzUuMTAyNCAxMi4zMDUgMzUuMDEwNCAxMi40NDQ0QzM0LjkxODQgMTIuNTc0NSAzNC44NzI0IDEyLjc0MTggMzQuODcyNCAxMi45NDYzQzM0Ljg3MjQgMTMuMzQ1OSAzNC45OTY2IDEzLjYyNDcgMzUuMjQ1IDEzLjc4MjdDMzUuNDkzNSAxMy45MzE0IDM1LjgyOTMgMTQuMDA1NyAzNi4yNTI2IDE0LjAwNTdaTTM2LjExNDYgNy43MTg2OUMzNi42NjY3IDcuNzE4NjkgMzcuMTMxNCA3Ljc4ODM5IDM3LjUwODcgNy45Mjc3OUMzNy44ODYgOC4wNjcxOSAzOC4xODUgOC4yNjIzNSAzOC40MDU5IDguNTEzMjhDMzguNjM1OSA4Ljc2NDIgMzguNzk2OSA5LjA3MDg4IDM4Ljg4ODkgOS40MzMzM0MzOC45OTAyIDkuNzg2NDggMzkuMDQwOCAxMC4xNzY4IDM5LjA0MDggMTAuNjA0M1YxNS4wMjMzQzM4Ljc4MzEgMTUuMDc5MSAzOC4zOTIxIDE1LjE0NDIgMzcuODY3NSAxNS4yMTg1QzM3LjM1MjIgMTUuMzAyMSAzNi43Njc5IDE1LjM0NCAzNi4xMTQ2IDE1LjM0NEMzNS42ODIxIDE1LjM0NCAzNS4yODY0IDE1LjMwMjEgMzQuOTI3NiAxNS4yMTg1QzM0LjU2ODcgMTUuMTM0OSAzNC4yNjA0IDE1LjAwMDEgMzQuMDAyOCAxNC44MTQyQzMzLjc1NDMgMTQuNjI4NCAzMy41NTY1IDE0LjM4NjcgMzMuNDA5MyAxNC4wODkzQzMzLjI3MTMgMTMuNzkyIDMzLjIwMjIgMTMuNDI0OSAzMy4yMDIyIDEyLjk4ODFDMzMuMjAyMiAxMi41Njk5IDMzLjI4MDUgMTIuMjE2NyAzMy40MzY5IDExLjkyODZDMzMuNjAyNSAxMS42NDA1IDMzLjgyMzQgMTEuNDA4MiAzNC4wOTk0IDExLjIzMTZDMzQuMzc1NSAxMS4wNDU3IDM0LjY5MjkgMTAuOTE1NiAzNS4wNTE4IDEwLjg0MTNDMzUuNDE5OSAxMC43NTc2IDM1LjgwMTcgMTAuNzE1OCAzNi4xOTc0IDEwLjcxNThDMzYuMzgxNSAxMC43MTU4IDM2LjU3NDcgMTAuNzI5OCAzNi43NzcxIDEwLjc1NzZDMzYuOTc5NiAxMC43NzYyIDM3LjE5NTggMTAuODEzNCAzNy40MjU5IDEwLjg2OTJWMTAuNTkwNEMzNy40MjU5IDEwLjM5NTIgMzcuNDAyOSAxMC4yMDkzIDM3LjM1NjggMTAuMDMyOEMzNy4zMTA4IDkuODU2MTggMzcuMjI4IDkuNzAyODQgMzcuMTA4NCA5LjU3MjczQzM2Ljk5OCA5LjQzMzMzIDM2Ljg0NjEgOS4zMjY0NSAzNi42NTI5IDkuMjUyMTFDMzYuNDY4OSA5LjE3Nzc2IDM2LjIzNDIgOS4xNDA1OCAzNS45NDkgOS4xNDA1OEMzNS41NjI1IDkuMTQwNTggMzUuMjA4MiA5LjE2ODQ3IDM0Ljg4NjIgOS4yMjQyM0MzNC41NjQxIDkuMjc5OTkgMzQuMzAxOSA5LjM0NTA0IDM0LjA5OTQgOS40MTkzOUwzMy44OTI0IDguMDUzMjVDMzQuMTA0IDcuOTc4OSAzNC40MTIzIDcuOTA0NTYgMzQuODE3MiA3LjgzMDIxQzM1LjIyMiA3Ljc1NTg2IDM1LjY1NDUgNy43MTg2OSAzNi4xMTQ2IDcuNzE4NjlaTTQyLjIwOTEgMTEuNTI0NEM0Mi4yMDkxIDEyLjI2NzggNDIuMzgzOSAxMi44NTMzIDQyLjczMzYgMTMuMjgwOEM0My4wODMzIDEzLjY5OSA0My41NjY0IDEzLjkwODEgNDQuMTgyOSAxMy45MDgxQzQ0LjQ0OTcgMTMuOTA4MSA0NC42NzUyIDEzLjg5ODggNDQuODU5MiAxMy44ODAyQzQ1LjA1MjQgMTMuODUyNCA0NS4yMDg5IDEzLjgyNDUgNDUuMzI4NSAxMy43OTY2VjkuNjE0NTVDNDUuMTgxMyA5LjUxMjMyIDQ0Ljk4MzQgOS40MTkzOSA0NC43MzUgOS4zMzU3NUM0NC40OTU3IDkuMjQyODEgNDQuMjM4MSA5LjE5NjM1IDQzLjk2MiA5LjE5NjM1QzQzLjM1NDcgOS4xOTYzNSA0Mi45MDg0IDkuNDA1NDUgNDIuNjIzMiA5LjgyMzY1QzQyLjM0NzEgMTAuMjQxOSA0Mi4yMDkxIDEwLjgwODggNDIuMjA5MSAxMS41MjQ0Wk00Ni45OTg2IDE0Ljk2NzZDNDYuNjY3NCAxNS4wNjk4IDQ2LjI0ODcgMTUuMTYyNyA0NS43NDI2IDE1LjI0NjRDNDUuMjQ1NyAxNS4zMyA0NC43MjEyIDE1LjM3MTggNDQuMTY5MSAxNS4zNzE4QzQzLjU5ODYgMTUuMzcxOCA0My4wODc5IDE1LjI4M6YgNDIuNjM3IDE1LjEwN0M0Mi4xODYxIDE0LjkzMDQgNDEuNzk5NiAxNC42Nzk1IDQxLjQ3NzUgMTQuMzU0MkM0MS4xNjQ3IDE0LjAxOTYgNDAuOTIwOCAxMy42MiA0MC43NDYgMTMuMTU1NEM0MC41ODA0IDEyLjY4MTQgNDAuNDk3NiAxMi4xNTE3IDQwLjQ5NzYgMTEuNTY2MkM0MC40OTc2IDEwLjk5IDQwLjU2NjYgMTAuNDY5NSA0MC43MDQ2IDEwLjAwNDlDNDAuODUxOCA5LjUzMDkxIDQxLjA2MzUgOS4xMjY2NSA0MS4zMzk1IDguNzkyMDhDNDEuNjE1NiA4LjQ1NzUyIDQxLjk1MTQgOC4yMDE5NSA0Mi4zNDcxIDguMDI1MzdDNDIuNzQyOCA3LjgzOTUgNDMuMTk4MyA3Ljc0NjU3IDQzLjcxMzYgNy43NDY1N0M0NC4wNjMyIDcuNzQ2NTcgNDQuMzcxNSA3Ljc4ODM5IDQ0LjYzODQgNy44NzIwM0M0NC45MDUyIDcuOTU1NjcgNDUuMTM1MyA4LjA0ODYgNDUuMzI4NSA4LjE1MDgzTDQ1LjMzMTggNC4zOTIwOUw0Ni45OTg2IDQuMzczMDVWMTQuOTY3NlpNNTEuNzIwMSA1LjQzMjVDNTMuMTA5NSA1LjQzMjUgNTQuMTcyMyA1LjY4ODA3IDU0LjkwODUgNi4xOTkyMUM1NS42NTM4IDYuNzEwMzUgNTYuMDI2NSA3LjUwOTU5IDU2LjAyNjUgOC41OTY5MkM1Ni4wMjY1IDkuMTYzODIgNTUuOTI1MyA5LjY1MTcyIDU1LjcyMjggMTAuMDYwNkM1NS41Mjk2IDEwLjQ2MDMgNTUuMjQ0MyAxMC43OTAyIDU0Ljg2NzEgMTEuMDUwNEM1NC40ODk4IDExLjMwMTMgNTQuMDI5NyAxMS40ODcyIDUzLjQ4NjggMTEuNjA4QzUyLjk0MzkgMTEuNzI4OCA1Mi4zMjI4IDExLjc4OTIgNTEuNjIzNCAxMS43ODkySDUwLjc1MzlWMTUuMTkwNkg0OS4wMTQ3VjUuNjY5NDhDNDkuNDE5NiA1LjU3NjU1IDQ5Ljg2NTkgNS41MTYxNCA1MC4zNTM2IDUuNDg4MjZDNTAuODUwNSA1LjQ1MTA5IDUxLjMwNiA1LjQzMjUgNTEuNzIwMSA1LjQzMjVaTTUxLjg0NDMgNi45NTE5OEM1MS40MDI2IDYuOTUxOTggNTEuMDM5MSA2Ljk2NTkyIDUwLjc1MzkgNi45OTM4VjEwLjI4MzdINTEuNTk1OEM1Mi40MzMyIDEwLjI4MzcgNTMuMDc3MyAxMC4xNjc1IDUzLjUyODIgOS45MzUxN0M1My45NzkxIDkuNjkzNTUgNTQuMjA0NSA5LjI0MjgxIDU0LjIwNDUgOC41ODI5OEM1NC4yMDQ1IDguMjY3IDU0LjE0NDcgOC4wMDIxNCA1NC4wMjUxIDcuNzg4MzlDNTMuOTA1NSA3LjU3NDY0IDUzLjczOTggNy40MDczNiA1My41MjgyIDcuMjg2NTRDNTMuMzE2NiA3LjE2NTczIDUzLjA2MzUgNy4wODIwOSA1Mi43NjkxIDcuMDM1NjJDNTIuNDgzOCA2Ljk3OTg2IDUyLjE3NTUgNi45NTE5OCA1MS44NDQzIDYuOTUxOThaTTU5LjY1NCAxNC4wMDU3QzYwLjE2OTMgMTQuMDA1NyA2MC41NjAzIDEzLjk3NzggNjAuODI3MiAxMy45MjIxVjEyLjA1NDFDNjAuNzM1MiAxMi4wMjYyIDYwLjYwMTcgMTEuOTk4MyA2MC40MjY5IDExLjk3MDRDNjAuMjUyMSAxMS45NDI2IDYwLjA1ODggMTEuOTI4NiA1OS44NDcyIDExLjkyODZDNTkuNjYzMiAxMS45Mjg2IDU5LjQ3NDUgMTEuOTQyNiA1OS4yODEzIDExLjk3MDRDNTkuMDk3MyAxMS45OTgzIDU4LjkyNyAxMi4wNDk0IDU4Ljc3MDYgMTIuMTIzOEM1OC42MjM0IDEyLjE5ODEgNTguNTAzNyAxMi4zMDUgNTguNDExNyAxMi40NDQ0QzU4LjMxOTcgMTIuNTc0NSA1OC4yNzM3IDEyLjc0MTggNTguMjczNyAxMi45NDYzQzU4LjI3MzcgMTMuMzQ1OSA1OC4zOTc5IDEzLjYyNDcgNTguNjQ2NCAxMy43ODI3QzU4Ljg5NDggMTMuOTMxNCA1OS4yMzA3IDE0LjAwNTcgNTkuNjU0IDE0LjAwNTdaTTU5LjUxNTkgNy43MTg2OUM2MC4wNjggNy43MTg2OSA2MC41MzI3IDcuNzg4MzkgNjAuOTEgNy45Mjc3OUM2MS4yODczIDguMDY3MTkgNjEuNTg2MyA4LjI2MjM1IDYxLjgwNzIgOC41MTMyOEM2Mi4wMzcyIDguNzY0MiA2Mi4xOTgzIDkuMDcwODggNjIuMjkwMyA5LjQzMzMzQzYyLjM5MTUgOS43ODY0OCA2Mi40NDIxIDEwLjE3NjggNjIuNDQyMSAxMC42MDQzVjE1LjAyMzNDNjIuMTg0NSAxNS4wNzkxIDYxLjc5MzQgMTUuMTQ0MiA2MS4yNjg5IDE1LjIxODVDNjAuNzUzNiAxNS4zMDIxIDYwLjE2OTMgMTUuMzQ0IDU5LjUxNTkgMTUuMzQ0QzU5LjA4MzUgMTUuMzQ0IDU4LjY4NzggMTUuMzAyMSA1OC4zMjg5IDE1LjIxODVDNTcuOTcgMTUuMTM0OSA1Ny42NjE4IDE1LjAwMDEgNTcuNDA0MSAxNC44MTQyQzU3LjE1NTcgMTQuNjI4NCA1Ni45NTc4IDE0LjM4NjcgNTYuODEwNiAxNC4wODkzQzU2LjY3MjYgMTMuNzkyIDU2LjYwMzYgMTMuNDI0OSA1Ni42MDM2IDEyLjk4ODFDNTYuNjAzNiAxMi41Njk5IDU2LjY4MTggMTIuMjE2NyA1Ni44MzgyIDExLjkyODZDNTcuMDAzOCAxMS42NDA1IDU3LjIyNDcgMTEuNDA4MiA1Ny41MDA3IDExLjIzMTZDNTcuNzc2OCAxMS4wNDU3IDU4LjA5NDMgMTAuOTE1NiA1OC40NTMxIDEwLjg0MTNDNTguODIxMiAxMC43NTc2IDU5LjIwMzEgMTAuNzE1OCA1OS41OTg4IDEwLjcxNThDNTkuNzgyOCAxMC43MTU4IDU5Ljk3NiAxMC43Mjk4IDYwLjE3ODUgMTAuNzU3NkM2MC4zODA5IDEwLjc3NjIgNjAuNTk3MSAxMC44MTM0IDYwLjgyNzIgMTAuODY5MlYxMC41OTA0QzYwLjgyNzIgMTAuMzk1MiA2MC44MDQyIDEwLjIwOTMgNjAuNzU4MiAxMC4wMzI4QzYwLjcxMjIgOS44NTYxOCA2MC42Mjk0IDkuNzAyODQgNjAuNTA5NyA5LjU3MjczQzYwLjM5OTMgOS40MzMzMyA2MC4yNDc1IDkuMzI2NDUgNjAuMDU0MiA5LjI1MjExQzU5Ljg3MDIgOS4xNzc3NiA1OS42MzU2IDkuMTQwNTggNTkuMzUwMyA5LjE0MDU4QzU4Ljk2MzggOS4xNDA1OCA1OC42MDk2IDkuMTY4NDcgNTguMjg3NSA5LjIyNDIzQzU3Ljk2NTQgOS4yNzk5OSA1Ny43MDMyIDkuMzQ1MDQgNTcuNTAwNyA5LjQxOTM5TDU3LjI5MzcgOC4wNTMyNUM1Ny41MDUzIDcuOTc4OSA1Ny44MTM2IDcuOTA0NTYgNTguMjE4NSA3LjgzMDIxQzU4LjYyMzQgNy43NTU4NiA1OS4wNTU4IDcuNzE4NjkgNTkuNTE1OSA3LjcxODY5Wk02OS4wODg3IDExLjU4MDFDNjkuMDg4NyAxMC44MjczIDY4LjkxODUgMTAuMjQxOSA2OC41NzggOS44MjM2NUM2OC4yNDY3IDkuNDA1NDUgNjcuNzA4NCA5LjE5NjM1IDY2Ljk2MzEgOS4xOTYzNUM2Ni44MDY2IDkuMTk2MzUgNjYuNjQxIDkuMjA1NjQgNjYuNDY2MiA5LjIyNDIzQzY2LjMwMDYgOS4yMzM1MiA2Ni4xMzQ5IDkuMjYxNCA2NS45NjkzIDkuMzA3ODdWMTMuNDc2QzY2LjExNjUgMTMuNTc4MiA2Ni4zMDk4IDEzLjY3NTggNjYuNTQ5IDEzLjc2ODdDNjYuNzk3NCAxMy44NTI0IDY3LjA1OTcgMTMuODk0MiA2Ny4zMzU4IDEzLjg5NDJDNjcuOTQzMSAxMy44OTQyIDY4LjM4NDggMTMuNjg1MSA2OC42NjA4IDEzLjI2NjlDNjguOTQ2MSAxMi44NDg3IDY5LjA4ODcgMTIuMjg2NCA2OS4wODg3IDExLjU4MDFaTTcwLjgwMDIgMTEuNTUyMkM3MC44MDAyIDEyLjEwOTggNzAuNzI2NiAxMi42MjEgNzAuNTc5NCAxMy4wODU3QzcwLjQ0MTQgMTMuNTUwMyA3MC4yMzg5IDEzLjk0OTkgNjkuOTcyMSAxNC4yODQ1QzY5LjcwNTIgMTQuNjE5MSA2OS4zNjkzIDE0Ljg3OTMgNjguOTY0NSAxNS4wNjUyQzY4LjU2ODggMTUuMjUxIDY4LjExNzkgMTUuMzQ0IDY3LjYxMTggMTUuMzQ0QzY3LjI3MTMgMTUuMzQ0IDY2Ljk1ODUgMTUuMzAyMSA2Ni42NzMyIDE1LjIxODVDNjYuMzg4IDE1LjEzNDkgNjYuMTUzMyAxNS4wNDE5IDY1Ljk2OTMgMTQuOTM5N1YxNy43Njk2SDY0LjI5OTJWOC4xMzY4OUM2NC42Mzk2IDguMDQzOTYgNjUuMDU4MyA3Ljk1NTY3IDY1LjU1NTIgNy44NzIwM0M2Ni4wNTIxIDcuNzg4MzkgNjYuNTc2NiA3Ljc0NjU3IDY3LjEyODcgNy43NDY1N0M2Ny42OTkyIDcuNzQ2NTcgNjguMjA5OSA3LjgzNDg2IDY4LjY2MDggOC4wMTE0M0M2OS4xMTE3IDguMTg4MDEgNjkuNDkzNiA4LjQ0MzU4IDY5LjgwNjQgOC43NzgxNEM3MC4xMjg1IDkuMTAzNDEgNzAuMzcyMyA5LjUwMzAzIDcwLjUzOCA5Ljk3N0M3MC43MTI4IDEwLjQ0MTcgNzAuODAwMiAxMC45NjY3IDcwLjgwMDIgMTEuNTUyMlpNNzEuOTMzIDExLjU4MDFDNzEuOTMzIDEwLjkzODkgNzIuMDI1IDEwLjM3NjYgNzIuMjA5IDkuODkzMzVDNzIuNDAyMyA5LjQxMDA5IDcyLjY1NTMgOS4wMTA0OCA3Mi45NjgyIDguNjk0NUM3My4yODEgOC4zNjkyMyA3My42Mzk5IDguMTI3NiA3NC4wNDQ4IDcuOTY5NjFDNzQuNDQ5NyA3LjgwMjMzIDc0Ljg2MzcgNy43MTg2OSA3NS4yODcgNy43MTg2OUM3Ni4yODA4IDcuNzE4NjkgNzcuMDUzOCA4LjAzMDAyIDc3LjYwNTkgOC42NTI2OEM3OC4xNjcyIDkuMjc1MzQgNzguNDQ3OCAxMC4yMDQ3IDc4LjQ0NzggMTEuNDQwN0M3OC40NDc4IDExLjUzMzYgNzguNDQzMiAxMS42NDA1IDc4LjQzNCAxMS43NjEzQzc4LjQzNCAxMS44NzI5IDc4LjQyOTQgMTEuOTc1MSA3OC40MjAyIDEyLjA2OEg3My42NTgzQzczLjcwNDMgMTIuNjUzNSA3My45MDY4IDEzLjEwODkgNzQuMjY1NiAxMy40MzQyQzc0LjYzMzcgMTMuNzUwMSA3NS4xNjI4IDEzLjkwODEgNzUuODUyOSAxMy45MDgxQzc2LjI1NzggMTMuOTA4MSA3Ni43ODE0IDEzLjg3NjggNzcuMTEyNiAxMy44MDI0Qzc3LjQ1MzEgMTMuNzI4MSA3Ny44NzIxIDEzLjYyMjYgNzguMDY1NCAxMy41Mzg5VjE0Ljg5NTZDNzcuOTczNCAxNC45NDIxIDc3Ljc1NzcgMTUuMDM3MyA3Ny41OTIxIDE1LjA5M0M3Ny40MzU2IDE1LjEzOTUgNzcuMjUxNiAxNS4xODEzIDc3LjA0IDE1LjIxODVDNzYuODM3NSAxNS4yNjUgNzYuNjE2NyAxNS4zMDIxIDc2LjM3NzQgMTUuMzNDNzYuMTM4MiAxNS4zNTc5IDc1Ljg5NDMgMTUuMzcxOCA3NS42NDU5IDE1LjM3MThDNzUuMDExIDE1LjM3MTggNzQuNDU4OSAxNS4yNzg5IDczLjk4OTYgMTUuMDkzQzczLjUyMDMgMTQuODk3OSA3My4xMzM4IDE0LjYzMyA3Mi44MzAxIDE0LjI5ODRDNzIuNTI2NSAxMy45NTQ2IDcyLjMwMSAxMy41NTUgNzIuMTUzOCAxMy4wOTk2QzcyLjAwNjYgMTIuNjM0OSA3MS45MzMgMTIuMTI4NCA3MS45MzMgMTEuNTgwMVpNNzYuNzc3NyAxMC44MjczQzc2Ljc3NzcgMTAuNTk1IDc2Ljc0NTUgMTAuMzc2NiA3Ni42ODExIDEwLjE3MjJDNzYuNjE2NyA5Ljk1ODQxIDc2LjUyMDEgOS43NzcxOSA3Ni4zOTEyIDkuNjI4NDlDNzYuMjcxNiA5LjQ3MDUgNzYuMTE5OCA5LjM0OTY5IDc1LjkzNTcgOS4yNjYwNUM3NS43NjA5IDkuMTczMTEgNzUuNTQ5MyA5LjEyNjY1IDc1LjMwMDggOS4xMjY2NUM3NS4wNDMyIDkuMTI2NjUgNzQuODE3NyA5LjE3Nzc2IDc0LjYyNDUgOS4yNzk5OUM3NC40MzEzIDkuMzcyOTIgNzQuMjY1NiA5LjQ5ODM4IDc0LjEyNzYgOS42NTYzN0M3My45OTg4IDkuODE0MzYgNzMuODk3NSA5Ljk5NTU4IDczLjgyMzkgMTAuMkM3My43NTAzIDEwLjQwNDUgNzMuNjk5NyAxMC42MTM2IDczLjY3MjEgMTAuODI3M0g3Ni43Nzc3Wk04NC40MzM0IDkuNDM0NzZDODQuMjk1NCA5LjM4ODMgODMuOTIyNyA5LjI5ODU3IDgzLjY3NDMgOS4yNTIxMUM4My40MzE2IDkuMTk2MzUgODMuMDQzOSA5LjE5NjM1IDgyLjcyMTkgOS4xOTYzNUM4Mi41Mzc4IDkuMTk2MzUgODIuMzQgOS4yMTQ5MyA4Mi4xMjg0IDkuMjUyMTFDODEuOTI1OSA5LjI4OTI4IDgxLjc4MzMgOS4zMjE4MSA4MS43MDA1IDkuMzQ5NjlWMTUuMTkwNkg4MC4wMzAzVjguMjQ4NDFDODAuMzUyNCA4LjEyNzYgODAuNzUyNyA4LjAxNjA4IDgxLjIzMTIgNy45MTM4NUM4MS43MTg5IDcuODAyMzMgODIuMjU3MiA3Ljc0NjU3IDgyLjg0NjEgNy43NDY1N0M4Mi45NTY1IDcuNzQ2NTcgODMuMDg1MyA3Ljc1NTg2IDgzLjIzMjYgNy43NzQ0NUM4My4zNzk4IDcuNzgzNzQgODMuNTI3IDcuODAyMzMgODMuNjc0MyA3LjgzMDIxQzgzLjgyMTUgNy44NDg4IDgzLjk2NDEgNy44NzY2OCA4NC4xMDIxIDcuOTEzODVDODQuMjQwMiA3Ljk0MTczIDg0LjM1MDYgNy45Njk2MSA4NC40MzM0IDcuOTk3NDlWOS40MzQ3NloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" data-v-f5c2522d=""><div class="close-popup" data-v-f5c2522d=""><span role="img" aria-label="close" class="anticon anticon-close white-c" data-v-f5c2522d=""><svg focusable="false" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></span></div></div><!----><div class="user-info neutral-4-b" data-v-f5c2522d=""><!----><div class="user-info-login idea-button blue-6-bg white-c" data-v-f5c2522d="">立即登录</div><div class="current-version" data-v-f5c2522d="">v1.2.5</div></div><!----></main></div></template></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+        div.grammarly-desktop-integration {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select:none;
+          user-select:none;
+        }
+  
+        div.grammarly-desktop-integration:before {
+          content: attr(data-content);
+        }
+      </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
