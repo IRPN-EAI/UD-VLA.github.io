@@ -509,13 +509,13 @@
             We initialize our model from a pretrained VLM backbone (Emu3), which is trained in an autoregressive manner with causal attention.
           </p>
           <ol style="font-size: 19px; text-align: justify; padding-left: 2em;">
-            <li><b>Stage (i):</b> Post-train on a large-scale video dataset to inject capabilities of future image generation into the VLA, enabling the robot to understand and model future states. The token sequences are constructed as:</li>
+            <li><b><a href="#stage1">Stage (i)</a>:</b> Post-train on a large-scale video dataset to inject capabilities of future image generation into the VLA, enabling the robot to understand and model future states. The token sequences are constructed as:</li>
             <div style="text-align: center; margin: 1em 0;">
               \[
                 [\;\text{text tokens}\;;\;\text{current image tokens}\;;\;\text{future image tokens}].
               \]
             </div>
-            <li><b>Stage (ii):</b> Jointly optimize image and action generation under a unified framework on the downstream robot action dataset. The token sequences are constructed as the full multimodal sequence. Reformulate autoregressive decoding as a diffusion process following JD3P, adopting a shift operation strategy to predict the next token. This enables the model to inherit capacity learned from next-token-prediction training while gaining the advantages of bidirectional context and parallel decoding.</li>
+            <li><b><a href="#stage2">Stage (ii)</a>:</b> Jointly optimize image and action generation under a unified framework on the downstream robot action dataset. The token sequences are constructed as the full multimodal sequence. Reformulate autoregressive decoding as a diffusion process following JD3P, adopting a shift operation strategy to predict the next token. This enables the model to inherit capacity learned from next-token-prediction training while gaining the advantages of bidirectional context and parallel decoding.</li>
           </ol>
         </div>
       </div>
@@ -532,10 +532,10 @@
             At inference, the denoising process uses parallel decoding with adaptive masking: all positions of \(\mathbf{v}_T\) and \(\mathbf{a}_T\) are initialized as <code>&lt;MASK&gt;</code>, token distributions for all positions are predicted in parallel, and this is repeated for a small number of iterations.
           </p>
           <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
-            <b>Prefix KV Cache and Pre-filling Tokens.</b> Employ prefix KV-Cache to cache keys and values of current visual and prompt tokens. Pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, and <code>&lt;BOA&gt;</code> at corresponding positions to guide denoising of visual and action tokens, reducing latency and improving speed.
+            <b><a href="#prefix-kv-cache">Prefix KV Cache and Pre-filling Tokens.</a></b> Employ prefix KV-Cache to cache keys and values of current visual and prompt tokens. Pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, and <code>&lt;BOA&gt;</code> at corresponding positions to guide denoising of visual and action tokens, reducing latency and improving speed.
           </p>
           <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
-            <b>Confidence-Guided Decoding.</b> Initialize with noise at \(t=T\) and iterate backward to \(t=0\) using cosine mask schedule \(\rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right)\). Rank masked positions by confidence score:
+            <b><a href="#confidence-guided-decoding">Confidence-Guided Decoding.</a></b> Initialize with noise at \(t=T\) and iterate backward to \(t=0\) using cosine mask schedule \(\rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right)\). Rank masked positions by confidence score:
           </p>
           <div style="text-align: center; margin: 1em 0;">
             \[
@@ -556,7 +556,7 @@
             \]
           </div>
           <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
-            <b>Decoding Space Mapping.</b> Restrict classification space to each modality's codebook to prevent wrong-modality tokens and stabilize generation. Once <code>&lt;EOA&gt;</code> is predicted at \(i^\star\), set subsequent tokens to <code>&lt;PAD&gt;</code> and exclude from refinement.
+            <b><a href="#decoding-space-mapping">Decoding Space Mapping.</a></b> Restrict classification space to each modality's codebook to prevent wrong-modality tokens and stabilize generation. Once <code>&lt;EOA&gt;</code> is predicted at \(i^\star\), set subsequent tokens to <code>&lt;PAD&gt;</code> and exclude from refinement.
           </p>
         </div>
       </div>
