@@ -393,7 +393,7 @@
         </p>
       </div>
       <div class="container is-max-desktop" style="margin-top: 0.5rem;">
-        <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+        <p style="font-size: 19px; text-align: left; ">
           We convert language, vision, and action into discrete tokens and concatenate them into a single multimodal sequence with special markers <code>&lt;BOI&gt;</code>/<code>&lt;EOI&gt;</code> and <code>&lt;BOA&gt;</code>/<code>&lt;EOA&gt;</code>.
         </p>
         <div style="text-align: center; margin: 1em 0;">
@@ -413,12 +413,12 @@
       <div class="container is-max-desktop" style="margin-top: 0.5rem;">
         <div class="columns is-vcentered">
           <div class="column is-half">
-            <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+            <p style="font-size: 19px; text-align: left; ">
               Text and current image use causal and bidirectional attention, respectively. Future-image tokens form a generation block and action tokens an acting block; each block is bidirectional, while cross-block attention is causal (acting attends to both input and generated image, no action-to-vision flow).
             </p>
           </div>
           <div class="column is-half">
-            <img src="./static/images/attention.png" alt="Hybrid Attention Mechanism" style="width: 60%; height: auto;">
+            <img src="./static/images/attention.png" alt="Hybrid Attention Mechanism" style="width: 50%; height: auto;">
           </div>
         </div>
       </div>
@@ -434,9 +434,9 @@
         <div class="columns is-vcentered">
           <div class="container is-max-desktop" style="margin-top: 0.5rem;">
             <div style="padding-right: 2.5rem; box-sizing: border-box;">
-              <p style="font-size: 19px; text-align: left; padding-left: 1em; text-indent: -1em;">
+              <p style="font-size: 19px; text-align: left; padding-left: 1em;">
                 <div class="container is-max-desktop" style="margin-top: 0.5rem;">
-                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+                  <p style="font-size: 19px; text-align: left; ">
                     Actions and images are generated in parallel within one denoising step. With future-image tokens \(\mathbf{v}_0\) and action tokens \(\mathbf{a}_0\), the joint sequence is
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
@@ -444,16 +444,16 @@
             \mathbf{v}_0,\ \mathbf{a}_0=(v_{0,1},\dots,v_{0,L_v},a_{0,1},\dots,a_{0,L_a}).
           \]
                   </div>
-                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
-          We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
+                  <p style="font-size: 19px; text-align: left; ">
+                    We add a mask token \(\mathrm{M}\). The noising transition at step \(t\) is
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
           \[
             \mathbf{Q}_t\,\mathbf{e}_{t,r}=(1-\beta_t)\,\mathbf{e}_{t,r}+\beta_t\,\mathbf{e}_\mathrm{M}.
           \]
                   </div>
-                  <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
-          The denoising factorizes as
+                  <p style="font-size: 19px; text-align: left; ">
+                    The denoising factorizes as
                   </p>
                   <div style="text-align: center; margin: 1em 0;">
           \[
@@ -480,7 +480,7 @@
         <div class="columns is-vcentered">
           <div class="container is-max-desktop" style="margin-top: 0.5rem;">
             <div style="padding-right: 0.5rem; box-sizing: border-box;">
-              <p style="font-size: 19px; text-align: justify; padding-left: 4em; text-indent: -4em;">
+              <p style="font-size: 19px; text-align: left; ">
                 We adopt a single-step mask-predict objective, computing cross-entropy only on masked positions:
               </p>
               <div style="text-align: center; margin: 1em 0;">
@@ -506,7 +506,7 @@
           2.2 Training
         </h2>
         <div class="container is-max-desktop" style="margin-top: 0.5rem;">
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; padding-left: 1em;">
             We initialize our model from a pretrained VLM backbone (Emu3), which is trained in an autoregressive manner with causal attention.
           </p>
           <ol style="font-size: 19px; text-align: justify; padding-left: 2em;">
@@ -529,13 +529,13 @@
           2.3 Inference
         </h2>
         <div class="container is-max-desktop" style="margin-top: 0.5rem;">
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; ">
             At inference, the denoising process uses parallel decoding with adaptive masking: all positions of \(\mathbf{v}_T\) and \(\mathbf{a}_T\) are initialized as <code>&lt;MASK&gt;</code>, token distributions for all positions are predicted in parallel, and this is repeated for a small number of iterations.
           </p>
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; ">
             <b><a href="#prefix-kv-cache">Prefix KV Cache and Pre-filling Tokens.</a></b> Employ prefix KV-Cache to cache keys and values of current visual and prompt tokens. Pre-fill <code>&lt;BOI&gt;</code>, <code>&lt;EOI&gt;</code>, and <code>&lt;BOA&gt;</code> at corresponding positions to guide denoising of visual and action tokens, reducing latency and improving speed.
           </p>
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; ">
             <b><a href="#confidence-guided-decoding">Confidence-Guided Decoding.</a></b> Initialize with noise at \(t=T\) and iterate backward to \(t=0\) using cosine mask schedule \(\rho_t = \cos\!\left(\tfrac{\pi}{2}\cdot \tfrac{T+1-t}{T+1}\right)\). Rank masked positions by confidence score:
           </p>
           <div style="text-align: center; margin: 1em 0;">
@@ -546,7 +546,7 @@
               \end{cases}
             \]
           </div>
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; ">
             Update top \((1-\rho_t)|M_t|\) entries via tempered Gumbel sampling:
           </p>
           <div style="text-align: center; margin: 1em 0;">
@@ -556,7 +556,7 @@
               \;\; \eta_c \stackrel{\text{i.i.d.}}{\sim} \mathrm{Gumbel}(0,1).
             \]
           </div>
-          <p style="font-size: 19px; text-align: justify; padding-left: 1em; text-indent: -1em;">
+          <p style="font-size: 19px; text-align: left; ">
             <b><a href="#decoding-space-mapping">Decoding Space Mapping.</a></b> Restrict classification space to each modality's codebook to prevent wrong-modality tokens and stabilize generation. Once <code>&lt;EOA&gt;</code> is predicted at \(i^\star\), set subsequent tokens to <code>&lt;PAD&gt;</code> and exclude from refinement.
           </p>
         </div>
@@ -823,4 +823,5 @@
         div.grammarly-desktop-integration:before {
           content: attr(data-content);
         }
+      </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
       </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
