@@ -58,7 +58,7 @@
     <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UD-VLA</title> 
-    <link rel="icon" type="image/x-icon" href="static/images/logo.ico">
+    <!-- <link rel="icon" type="image/x-icon" href="static/images/logo.ico"> -->
   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -157,8 +157,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img src="static/images/logo.ico" alt="icon" style="height: 1.3em; vertical-align: -0.15em; margin-right: .3em;">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1>
-            <!-- <h1 class="title is-1 publication-title">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1> -->
+            <!-- <h1 class="title is-1 publication-title"><img src="static/images/logo.ico" alt="icon" style="height: 1.3em; vertical-align: -0.15em; margin-right: .3em;">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1> -->
+            <h1 class="title is-1 publication-title">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="#AUTHOR-2" class="author-link placeholder-link">Jiayi Chen<sup>1*</sup></a>
@@ -575,7 +575,7 @@
   <section class="section">
       <!-- Animation. -->
       <div class="columns is-centered">
-        <div class="container is-max-desktop" style="top: 3px;">
+        <div class="container is-max-desktop" style="top: 4px;">
           <h2 id="Results" class="title is-3" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 1rem;">3. Results</h2>
   
   
@@ -714,298 +714,16 @@
             </table>
           </div>
   
-  
-  
-        <!------------------------------------------------------------------------------------>
-        <!---------------- 3.2 Execution Examples on The Different Benchmarks ---------------->
-        <!------------------------------------------------------------------------------------>
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
-          3.2 Execution Examples on The Different Benchmarks</h2>
-  
-        <!------------------------------------------------------->
-        <!---------------- 3.2.1 LIBERO-Spatial  ---------------->
-        <!------------------------------------------------------->
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
-          3.2.1 LIBERO-Spatial </h2>
-        <style>
-          .video-container {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;}
-          .video-item {width: 13.3%; display: flex; flex-direction: column; align-items: center; text-align: center;}
-          .video-item video {width: 100%; height: auto;}
-          .caption {margin-top: 5px; font-size: 13px; color: #555;}
-        </style>
-  
-        <div class="video-container">
-          <div class="video-item">
-            <video id="teaserl1s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s1.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl between the plate and the ramekin and place it on the plate </div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl2s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s2.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl next to the ramekin and place it on the plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl3s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s3.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl from table center and place it on the plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl4s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s4.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl on the cookie box and place it on the plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl5s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s5.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl6s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s6.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl on the stove and place it on the plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl7s" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/s7.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the black bowl next to the plate and place it on the plate</div>
-          </div>
-        </div>
-  
-        <!------------------------------------------------------->
-        <!---------------- 3.2.2 LIBERO-Object  ----------------->
-        <!------------------------------------------------------->
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
-          3.2.2 LIBERO-Object </h2>
-        <div class="video-container">
-          <div class="video-item">
-            <video id="teaserl1o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long1.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the alphabet soup and place it in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl2o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long2.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the salad dressing and place it in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl3o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long3.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the bbq sauce and place it in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl4o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long4.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the ketchup and place it in the basket </div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl5o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long5.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the tomato sauce and place it in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl6o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long6.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the milk and place it in the basket  </div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl7o" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/Long7.mp4" type="video/mp4">
-            </video><div class="caption">Pick up the chocolate pudding and place it in the basket </div>
-          </div>
-        </div>
-  
-        <!------------------------------------------------------->
-        <!----------------- 3.2.3 LIBERO-Goal  ------------------>
-        <!------------------------------------------------------->
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
-          3.2.3 LIBERO-Goal</h2>
-        <div class="video-container">
-          <div class="video-item">
-            <video id="teaserl1" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g1.mp4" type="video/mp4">
-            </video><div class="caption">Open the middle drawer of the cabinet </div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl2" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g2.mp4" type="video/mp4">
-            </video><div class="caption">Put the bowl on the stove</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl3" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g3.mp4" type="video/mp4">
-            </video><div class="caption">Put the wine bottle on top of the cabinet</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl4" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g4.mp4" type="video/mp4">
-            </video><div class="caption">Open the top drawer and put the bowl inside</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl5" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g5.mp4" type="video/mp4">
-            </video><div class="caption">Put the bowl on top of the cabinet </div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl6" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g6.mp4" type="video/mp4">
-            </video><div class="caption">Push the plate to the front of the stove</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserl7" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/g7.mp4" type="video/mp4">
-            </video><div class="caption">Put the wine bottle on the rack</div>
-          </div>
-        </div>
-  
-        <!------------------------------------------------------->
-        <!----------------- 3.2.4 LIBERO-Long  ------------------>
-        <!------------------------------------------------------->
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
-          3.2.4 LIBERO-Long</h2>
-        <div class="video-container">
-          <div class="video-item">
-            <video id="teaser2" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/12.mp4" type="video/mp4">
-            </video><div class="caption">Put both the cream cheese box and the butter in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser4" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/14.mp4" type="video/mp4">
-            </video><div class="caption">Put the black bowl in the bottom drawer of the cabinet and close it</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser8" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/13.mp4" type="video/mp4">
-            </video><div class="caption">Turn on the stove and put the moka pot on it</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser10" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/15.mp4" type="video/mp4">
-            </video><div class="caption">Put the white mug on the left plate and put the yellow and white mug on the right plate</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser14" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/19.mp4" type="video/mp4">
-            </video><div class="caption">Put both moka pots on the stove</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser18" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/18.mp4" type="video/mp4">
-            </video><div class="caption">Put both the alphabet soup and the cream cheese box in the basket</div>
-          </div>
-          <div class="video-item">
-            <video id="teaser20" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/20.mp4" type="video/mp4">
-            </video><div class="caption">Put the yellow and white mug in the microwave and close it</div>
-          </div>
-        </div>
-  
-        <!------------------------------------------------------->
-        <!---------------- 3.2.5 CALVIN ABC->D  ----------------->
-        <!------------------------------------------------------->
-        <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">
-          3.2.5 CALVIN ABC-&gt;D</h2>
-        <div class="video-container">
-          <div class="video-item">
-            <video id="teaserc11" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/1.mp4" type="video/mp4">
-            </video><div class="caption">Open drawer➝Lift pink block table➝Place in slider➝Turn on lightbulb➝Rotate blue block left</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc51" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/5.mp4" type="video/mp4">
-            </video><div class="caption">Lift red block table➝Place in drawer➝Rotate blue block right➝Lift pink block slider ➝Stack block</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc7" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/2.mp4" type="video/mp4">
-            </video><div class="caption">Move slider right➝Turn on lightbulb➝Push pink block left➝Open drawer➝Push into drawer</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc9" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/4.mp4" type="video/mp4">
-            </video><div class="caption">Push pink block right➝Lift red block table➝Stack block➝Move slider left➝Unstack block</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc111" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/6.mp4" type="video/mp4">
-            </video><div class="caption">Turn off led➝Close drawer➝Move slider left➝Push pink block right➝Lift red block slider</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc13" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/8.mp4" type="video/mp4">
-            </video><div class="caption">Push into drawer➝Close drawer➝Move slider right ➝Lift pink block slider➝Place in slider</div>
-          </div>
-          <div class="video-item">
-            <video id="teaserc19" autoplay="" muted="" loop="" playsinline="" preload="none" loading="lazy">
-              <source src="./static/videos/9.mp4" type="video/mp4">
-            </video><div class="caption">Turn off lightbulb➝Move slider left➝Push blue block left➝Lift pink block slider➝ Stack block</div>
-          </div>
-        </div>
-  
-        <!------------------------------------------------------->
-        <!----------------- 3.2.6 Real-World  ------------------->
-        <!------------------------------------------------------->
-  <!--      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; margin-top: 1rem; font-size: 22px;">-->
-  <!--        3.2.6 Real-World</h2>-->
-  
-  
-  
-      <!------------------------------------------------------------------------------------>
-      <!------------------------------ 3.3 Keyframe Examples ------------------------------->
-      <!------------------------------------------------------------------------------------>
-      <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
-        3.3 Keyframe Examples</h2>
-  
-          <div class="content has-text-justified" style="font-family: 'Google Sans', sans-serif;">
-            <p style="font-size: 19px;">
-              We give two keyframe examples of the key frames of the robot arm performing a task.
-              You can drag the progress bar in the middle bottom to view it.
-            </p>
-          </div>
-          <div class="columns is-vcentered interpolation-panel">
-            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
-              <img src="./static/images/start.jpg" class="interpolation-image" alt="Interpolate start reference image.">
-              <p style="font-size: 19px;">Start RGB observation and Proprio. state</p>
-            </div>
-            <div class="column interpolation-video-column">
-              <div id="interpolation-image-wrapper"><img src="./static/interpolation/stacked/000000.jpg" style="width: 300px; height: auto; display: block; margin: 0px auto;"></div>
-              <div style="display: flex; justify-content: center;">
-                <input class="slider is-large is-info" id="interpolation-slider" style="width: 300px;" step="1" min="0" max="181" value="0" type="range">
-      </div>
-    </div>
-            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
-              <img src="./static/images/end.jpg" class="interpolation-image" alt="Interpolation end reference image.">
-              <p style="font-size: 19px;">End RGB observation and Proprio. state</p>
-            </div>
-  </div>
-  
-          <div class="columns is-vcentered interpolation-panel">
-            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
-              <img src="./static/images/start.jpg" class="interpolation-image" alt="Interpolate start reference image.">
-              <p style="font-size: 19px;">Start RGB observation and Proprio. state</p>
-            </div>
-            <div class="column interpolation-video-column">
-              <div id="interpolation-image-wrapper"><img src="./static/interpolation/stacked/000000.jpg" style="width: 300px; height: auto; display: block; margin: 0px auto;"></div>
-              <div style="display: flex; justify-content: center;">
-                <input class="slider is-large is-info" id="interpolation-slider" style="width: 300px;" step="1" min="0" max="181" value="0" type="range">
-              </div>
-            </div>
-            <div class="column is-3 has-text-centered" style="font-family: 'Google Sans', sans-serif;">
-              <img src="./static/images/end.jpg" class="interpolation-image" alt="Interpolation end reference image.">
-              <p style="font-size: 19px;">End RGB observation and Proprio. state</p>
-            </div>
-          </div>
+
 
           <h2 class="title is-4" style="font-family: 'Google Sans', sans-serif; text-align: center; margin-top: 4rem; font-size: 26px;">
             3.4 Real-World Experiment</h2>
         <div class="content has-text-justified">
-          <figure class="image is-16by4" >
-                <img src="static/images/real_world_result.png" alt="ReconVLA architecture"  style="width:auto ; height:100% ;">
+          <figure class="image is-16by4">
+                <img src="static/images/real_world_result.png" alt="ReconVLA architecture" style="width:auto ; height:100% ;">
           </figure>
           <p><b>Setup and Tasks.</b> The real-world setup uses a dual-camera configuration. We evaluate three manipulation categories—stacking bowls, putting blocks into a box, and flipping towers—covering varied colors and shapes across three backgrounds. For each category, 200 trajectories are collected at 15 Hz, with both seen and unseen settings for evaluation.</p>
-          <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving >80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
+          <p><b>Results and Analysis.</b> Across 30 trials per method, UD-VLA consistently surpasses GR00T N1 and UniVLA, achieving &gt;80% success. On seen tasks, action quantization plus joint denoising yields precise actions. On unseen tasks, future-image prediction strengthens visual generalization and guides correct actions, whereas baselines degrade without explicit future visual reasoning.</p>
         </div>
 
   
